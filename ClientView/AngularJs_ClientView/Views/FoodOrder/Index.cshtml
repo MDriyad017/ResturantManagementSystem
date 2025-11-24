@@ -1,0 +1,182 @@
+﻿@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<link href="~/Content/css/menuResponsive.css" rel="stylesheet" />
+<link href="~/Content/css/forProductOrderResposive.css" rel="stylesheet" />
+
+<style>
+    .disabled-div {
+        opacity: 0.4;
+    }
+
+        .disabled-div:hover {
+            cursor: not-allowed;
+        }
+</style>
+
+<div id="content" ng-controller="foodItemController">
+    <div class="row">
+        <!-- Side Menu -->
+        <div class="col-md-2 col-sm-12 col-xs-12">
+            <div class="sidebar-menu">
+                <ul class="menu-list">
+                    <li class="menu-item active">
+                        <a href="" ng-click="filterFoodsCategoryWise('ALL')">
+                            <div class="menu-icon"><i class="fa fa-fw fa-utensils"></i></div>
+                            <div class="menu-text">All Dishes</div>
+                        </a>
+                    </li>
+                    <li class="menu-item">
+                        <a href="" ng-click="filterFoodsCategoryWise('MET')">
+                            <div class="menu-icon"><i class="fa fa-fw fa-drumstick-bite"></i></div>
+                            <div class="menu-text">Meat</div>
+                        </a>
+                    </li>
+                    <li class="menu-item">
+                        <a href="" ng-click="filterFoodsCategoryWise('FIS')">
+                            <div class="menu-icon"><i class="fa fa-fw fa-fish"></i></div>
+                            <div class="menu-text">Fish</div>
+                        </a>
+                    </li>
+                    <li class="menu-item">
+                        <a href="" ng-click="filterFoodsCategoryWise('BAR')">
+                            <div class="menu-icon"><i class="fa fa-fw fa-hamburger"></i></div>
+                            <div class="menu-text">Burger</div>
+                        </a>
+                    </li>
+                    <li class="menu-item">
+                        <a href="" ng-click="filterFoodsCategoryWise('DRK')">
+                            <div class="menu-icon"><i class="fa fa-fw fa-cocktail"></i></div>
+                            <div class="menu-text">Drinks</div>
+                        </a>
+                    </li>
+                    <li class="menu-item">
+                        <a href="" ng-click="filterFoodsCategoryWise('DRT')">
+                            <div class="menu-icon"><i class="fa fa-fw fa-ice-cream"></i></div>
+                            <div class="menu-text">Desserts</div>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Food Content -->
+        <div class="col-md-7 col-sm-7 col-xs-12" style="max-height: 540px; overflow-y: auto;">
+            <div class="row">
+                <div class="col-md-4 col-sm-6 col-xs-12" ng-repeat="item in allFoodsJsonListData" style="padding: 15px;">
+                    <div class="card shadow-sm"
+                         ng-class="{'disabled-div': item.Available === false || item.Stock === 0}"
+                         style="border-radius: 5px; overflow: hidden; height: auto; display: flex; flex-direction: column; justify-content: space-between;">
+
+                        <!-- Card Header: Image -->
+                        <div class="card-header text-center" style="background: #f8f9fa; padding: 8px;">
+                            <img src="~/Images/FoodImg/{{item.FoodId}}.jpg"
+                                 alt="Food img"
+                                 class="img-responsive"
+                                 style="height: 100px; width: 100px; display: block; margin: 0 auto;" />
+                        </div>
+
+                        <!-- Card Body: Food Details -->
+                        <div class="card-body" style="padding: 10px;">
+                            <h6 class=" text-center" style="margin-bottom: 10px;"><strong>{{item.FoodName}}</strong></h6>
+                            <p class="card-text">
+                                <strong>Price:</strong> {{item.FoodPrice.toFixed(2)}} <br>
+                                <strong>Stock:</strong> {{item.Stock === 0 ? 'Out Of Stock' : item.Stock}}
+                            </p>
+                        </div>
+
+                        <!-- Card Footer: Button -->
+                        <div>
+                            <button type="button"
+                                    style="border-radius: 0px 0px 2px 2px !important; background: #020247;"
+                                    class="btn btn-primary btn-sm btn-icon-split w-100"
+                                    ng-click="clickToAddFoods(item)"
+                                    ng-disabled="item.Available === false || item.Stock === 0">
+                                <span class="text"><strong><i class="fas fa-plus"></i>&nbsp;&nbsp; Add To Order</strong></span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Place Order -->
+        <div class="col-md-3 col-sm-3 col-xs-12">
+            <div class="card shadow-sm" style="margin-top: 13px;">
+                <div class="card-header d-flex justify-content-between" style="background: #000099; color: whitesmoke; padding: 5px 5px 0px 5px !important;">
+                    <h5 style=""><strong>Order Placed</strong></h5>
+                    <p>{{tableName}}</p>
+                </div>
+                <div class="card-body" style="height: 380px; overflow-y: auto;">
+                    <div class="row" ng-repeat="food in selectedFoodForOrderJsonList">
+                        <div style="display: flex; justify-content: space-between; margin-bottom: 15px;">
+                            <img src="~/Images/FoodImg/{{food.FoodItemID}}.jpg"
+                                 style="width: 50px; height: 50px; border: 1px solid black; margin: 0px 0px 0px;" />
+
+                            <div class="info" style="margin-left:10px;">
+                                <div class="title"><strong>{{food.FoodName}}</strong></div>
+                                
+                                <div class="single-price">$ {{food.FoodPrice.toFixed(2)}}</div>
+                                <div class="input-group" style="width: 130px;">
+                                    <div class="input-group-append" style="height: 28px;">
+                                        <button class="btn btn-secondary btn-sm" ng-click="decrementQuantity(food)" style="border-radius: 4px 0px 0px 4px;">
+                                            <i class="fa fa-minus"></i>
+                                        </button>
+                                    </div>
+                                    <input type="text" class="form-control" ng-model="food.Quantity" style="text-align: center; height:28px;" readonly>
+                                    <div class="input-group-prepend" style="height: 28px;">
+                                        <button class="btn btn-secondary btn-sm" ng-click="incrementQuantity(food)" ng-disabled="food.Stock === 0" style="border-radius: 0px 4px 4px 0px;">
+                                            <i class="fa fa-plus"></i>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="card-footer" style="background: #020247; color: whitesmoke; padding: 0px !important ">
+                    <div class="d-flex justify-content-between p-1">
+                        <h5>Total: </h5>
+                        <h5>{{totalFoodPrice}}</h5>
+                    </div>
+                    <div class="">
+                        @*<button class="btn btn-default text-center"><i class="fa fa-receipt d-block fs-18px my-1"></i>Bill</button>*@
+                        @*<div class="col-md-3 col-sm-3 col-xs-12">
+            <a href="#" class="btn btn-primary text-center" style="border-radius: 5px !important; "><i class="fa fa-receipt d-block my-1"></i> Bill</a>
+        </div>*@
+
+                        <button type="button"
+                                style="border-radius: 0px 0px 2px 2px !important;"
+                                class="btn btn-success btn-sm btn-icon-split w-100"
+                                ng-click="clickToSaveOrder()"
+                                ng-disabled="confirmOrder"
+                                ng-class="{'disabled-div': confirmOrder === true}">
+                            <span class="text"><strong><i class="fa fa-shopping-cart d-block my-1"></i>&nbsp;&nbsp; Order Confirm</strong></span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+@section scripts {
+    <script src="~/Scripts/ngServices/FoodItemService/foodItemService.js?reload=@DateTime.Now.Date.ToShortDateString()"></script>
+    <script src="~/Scripts/ngServices/FoodOrderService/foodOrderService.js?reload=@DateTime.Now.Date.ToShortDateString()"></script>
+    <script src="~/Scripts/ngControllers/FoodItem/foodItemController.js?reload=@DateTime.Now.Date.ToShortDateString()"></script>
+    <script>
+        $(document).ready(function () {
+            // On clicking any menu item
+            $(".menu-item").click(function (e) {
+                e.preventDefault(); // Prevent the default link behavior
+
+                // Remove 'active' class from all menu items
+                $(".menu-item").removeClass("active");
+
+                // Add 'active' class to the clicked menu item
+                $(this).addClass("active");
+            });
+        });
+    </script>
+}

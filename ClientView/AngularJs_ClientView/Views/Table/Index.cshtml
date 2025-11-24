@@ -1,0 +1,95 @@
+﻿@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<style>
+    /* Hide the default checkbox */
+    .form-check-input.rounded-checkbox {
+        appearance: none;
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        width: 40px; /* Increase size */
+        height: 40px; /* Increase size */
+        border: 4px solid #ccc;
+        border-radius: 50%; /* Make it round */
+        outline: none;
+        cursor: pointer;
+        position: relative;
+    }
+
+    /* Style for the checked state */
+    .form-check-input.rounded-checkbox:checked {
+        background-color: #03037B; /* Change color when checked */
+        border-color: #33ff33;
+    }
+
+    /* Add a bigger checkmark inside the rounded checkbox */
+    .form-check-input.rounded-checkbox:checked::after {
+        content: '';
+        position: absolute;
+        left: 10px;
+        top: 3px;
+        width: 11px;
+        height: 21px;
+        border: solid #33ff33;
+        border-width: 0 3px 3px 0; /* Thicker checkmark */
+        transform: rotate(45deg);
+    }
+
+    .disabled-div {
+        opacity: 0.4;
+    }
+    
+    .disabled-div:hover {
+        cursor: not-allowed;
+    }
+
+    .coursorNone:hover {
+        cursor: not-allowed;
+    }
+
+    p {
+        margin-bottom: 0rem;
+    }
+</style>
+
+<div id="content" ng-controller="foodItemController">
+    <div class="right_col" role="main">
+        <div class="">
+            <div class="row">
+                <div class="col-md-12 col-xs-12">
+                    <div>
+                        <h3 class="display-5 alert alert-primary mt-2 text-center">RMS PROJECT</h3>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-3 col-sm-6 col-xs-12 mb-3" ng-repeat="item in allTableJsonListData">
+                            <a href="#" style="text-decoration: none; color: darkgray;" ng-class="{'disabled-div': item.IsAvailableTbl === false}" ng-click="clickToOpenOrder(item.TableId, item.Table)">
+                                <div class="card shadow-sm">
+                                    <div class="card-header text-center d-flex justify-content-between" style="background: #03037B; padding: 0px 5px 0px 5px; align-items: center; ">
+                                        <div>
+                                            <p style="margin-bottom: 0rem !important; font-size: 20px;"><strong>{{item.Table}}</strong></p>
+                                        </div>
+                                        <div class="form-check">
+                                            <input class="form-check-input rounded-checkbox coursorNone" type="checkbox" value="" id="flexCheckChecked" ng-checked="item.IsAvailableTbl === false" disabled />
+                                        </div>
+                                    </div>
+                                    <div class="card-body" style="padding: 10px; text-align: center">
+                                        <p><strong>{{item.Table}}</strong> </p> 
+                                        <p style="font-size: 20px;"><strong>{{item.IsAvailableTbl ? 'Available' : 'Booked' }}</strong></p>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+@section scripts {
+    <script src="~/Scripts/ngServices/FoodItemService/foodItemService.js?reload=@DateTime.Now.Date.ToShortDateString()"></script>
+    <script src="~/Scripts/ngServices/FoodOrderService/foodOrderService.js?reload=@DateTime.Now.Date.ToShortDateString()"></script>
+    <script src="~/Scripts/ngControllers/FoodItem/foodItemController.js?reload=@DateTime.Now.Date.ToShortDateString()"></script>
+}

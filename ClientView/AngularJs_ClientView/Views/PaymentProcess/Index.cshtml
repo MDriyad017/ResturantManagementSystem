@@ -1,0 +1,89 @@
+﻿@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<style>
+    .text-green {
+        color: #00cc00;
+    }
+
+    .disabled-div {
+        opacity: 0.4;
+    }
+
+        .disabled-div:hover {
+            cursor: not-allowed;
+        }
+</style>
+
+<div id="content" ng-controller="foodItemController">
+    <div class="card shadow mb-4">
+        <div class="card-header py-3 align-items-center text-center">
+            <h4 class="font-weight-bold text-primary m-0 display-5"><strong>Payment</strong></h4>
+        </div>
+        <div class="card-body">
+            <table class="table table-bordered table-striped table-sm table-responsive-sm">
+                <thead style="color: #525463;">
+                    <tr>
+                        <th>Table No</th>
+                        <th>Foods</th>
+                        <th>Total Price</th>
+                        <th style="width: 40px">Payment</th>
+                        <th style="width: 40px"></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr ng-repeat="order in allOrderJsonListData.Data" ng-class="{'text-green': order.IsPayementDone}">
+                        <td>{{order.Table}}</td>
+                        <td>{{order.Foods}}</td>
+                        <td>{{order.TotalPrice}}</td>
+                        <td>
+                            <div class="d-flex justify-content-center">
+                                <!-- Show "Payment" button if IsPayementDone is false -->
+                                <button ng-if="!order.IsPayementDone" type="button" ng-click="clickToPayment(order.OrderId, order.TableID)" class="btn btn-primary btn-sm" style="display: flex;justify-content: center;align-items: center;">
+                                    <i class="fas fa-handshake"></i>
+                                    &nbsp; <span>Payment</span>
+                                </button>
+                                
+                                <!-- Show "Done" button if IsPayementDone is true -->
+                                <button ng-if="order.IsPayementDone" type="button" class="btn btn-success btn-sm" style="display: flex;justify-content: center;align-items: center;" ng-class="{'disabled-div': order.IsPayementDone === true}" disabled>
+                                    <i class="fas fa-check-circle"></i>
+                                    &nbsp; <span>Done</span>
+                                </button>
+                            </div>
+                        </td>
+                        <td>
+
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <div class="row" style="margin-top:6px !important;">
+                <div class="col-md-9 col-sm-12 col-xs-12">
+                    <div class="dataTables_info" role="status" aria-live="polite">{{showRecordsInfoPayment}}</div>
+                </div>
+                <div class="col-md-3 col-sm-12 col-xs-12" ng-show="showGridPayment">
+                    <div class="dataTables_paginate paging_simple_numbers">
+                        <ul class="pagination" style="justify-content:end;">
+                            <li class="paginate_button previous" ng-class="pageIndexPayment > 1 ? 'active' : 'disabled'">
+                                <a href="#" aria-controls="datatable" ng-class="pageIndexPayment > 1 ? 'active' : 'disabled'" class="btn btn-info btn-sm" title="Previous" ng-click="previousPayment($event)"><i class="fas fa-arrow-circle-left"></i></a>
+                            </li> &nbsp;&nbsp;&nbsp;
+                            <li class="paginate_button next" ng-class="pageIndexPayment < allOrderJsonListData.LastPageNo ? 'active' : 'disabled'">
+                                <a href="#" aria-controls="datatable" ng-class="pageIndexPayment < allOrderJsonListData.LastPageNo ? 'active' : 'disabled'" class="btn btn-info btn-sm" title="Next" ng-click="nextPayment($event)"><i class="fas fa-arrow-circle-right"></i></a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+@section scripts {
+    <script src="~/Scripts/ngServices/FoodItemService/foodItemService.js?reload=@DateTime.Now.Date.ToShortDateString()"></script>
+    <script src="~/Scripts/ngServices/FoodOrderService/foodOrderService.js?reload=@DateTime.Now.Date.ToShortDateString()"></script>
+    <script src="~/Scripts/ngControllers/FoodItem/foodItemController.js?reload=@DateTime.Now.Date.ToShortDateString()"></script>
+}
+
+

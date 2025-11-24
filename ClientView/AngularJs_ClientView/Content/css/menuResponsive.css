@@ -1,0 +1,96 @@
+﻿.sidebar-menu {
+    width: 140px;
+    /*background-color: #f9f9f9;*/
+    /*border-right: 1px solid #ddd;*/
+    overflow-y: auto; /* Vertical scrolling for large screens */
+    height: 100vh;
+    padding: 10px 0;
+}
+
+.menu-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column; /* Default vertical layout */
+}
+
+.menu-item {
+    margin: 4px 0;
+    width: 130px;
+    background-color: #1a1a1a;
+    border-radius: 7px;
+}
+
+    .menu-item a {
+        display: flex;
+        align-items: center;
+        padding: 10px 15px;
+        /*color: #666;*/
+        text-decoration: none;
+        border-radius: 5px;
+        transition: all 0.3s ease;
+        color: white;
+    }
+
+    .menu-item.active a,
+    .menu-item a:hover {
+        background-color: #999999;
+        color: #0d0d0d;
+    }
+
+.menu-icon {
+    font-size: 20px;
+    margin-right: 10px;
+}
+
+.menu-text {
+    font-size: 14px;
+}
+
+.menu-item a:hover .menu-icon {
+    color: #0d0d0d;
+}
+
+/* Responsive layout for small screens */
+@media (max-width: 1205px) {
+    .sidebar-menu {
+        width: 131%;
+        height: auto;
+        border-right: none;
+        border-bottom: 1px solid #ddd;
+        padding: 0; /* Compact layout */
+        overflow-x: auto; /* Enable horizontal scrolling for small screens */
+    }
+
+    .menu-list {
+        flex-direction: row; /* Align items horizontally */
+        flex-wrap: nowrap; /* Prevent wrapping */
+        justify-content: flex-start; /* Left-align the menu */
+        overflow-x: auto; /* Horizontal scrolling */
+        white-space: nowrap; /* Prevent text wrapping */
+    }
+
+    .menu-item {
+        flex: 0 0 auto; /* Prevent items from shrinking or growing */
+        margin: 5px 3px;
+        text-align: center;
+        background: #9ca19e;
+        border-radius: 5px;
+        color: white;
+    }
+
+        .menu-item a {
+            flex-direction: column; /* Align icon and text vertically */
+            padding: 3px;
+            color: white;
+        }
+
+    .menu-icon {
+        margin: 0 0 5px 0; /* Adjust spacing */
+    }
+
+    /*.col-md-2 {
+        max-width: 13.667% !important;
+    }*/
+}

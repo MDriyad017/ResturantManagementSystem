@@ -1,0 +1,174 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div id="content" ng-controller="foodItemController">
+    <div class="card shadow mb-4">
+        <div class="card-header py-3">
+            <h6 class="m-0 font-weight-bold text-primary"><strong>Food Entry</strong></h6>
+        </div>
+        <form name="frmFoodItem" class="form-horizontal form-label-left input_mask">
+            <div class="card-body">
+                <div class="row">
+                    <div class="col-md-6 col-xs-12">
+                        <div class="form-group row d-flex align-items-center">
+                            <label class="control-label col-md-4 col-sm-4 col-xs-12 m-0 text-center">Food Name <span style="color:red">*</span></label>
+                            <div class="col-md-8 col-sm-8 col-xs-12">
+                                <input class="form-control" type="text" placeholder="Food Name" required name="foodName" ng-model="foodName" />
+                            </div>
+                        </div>
+                        <div class="form-group row d-flex align-items-center">
+                            <label class="control-label col-md-4 col-sm-4 col-xs-12 m-0 text-center">Food Price <span style="color:red">*</span></label>
+                            <div class="col-md-8 col-sm-8 col-xs-12">
+                                <input class="form-control" type="text" placeholder="0" required name="foodPrice" ng-model="foodPrice" onfocus="this.select()" positive-numbers-only />
+                            </div>
+                        </div>
+                        <div class="form-group row d-flex align-items-center">
+                            <label class="control-label col-md-4 col-sm-4 col-xs-12 m-0 text-center">Stock <span style="color:red">*</span></label>
+                            <div class="col-md-8 col-sm-8 col-xs-12">
+                                <input class="form-control" type="text" required name="foodStock" placeholder="0" ng-model="foodStock" onfocus="this.select()" positive-numbers-only/>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-xs-12">
+                        <div class="form-group row d-flex align-items-center">
+                            <label class="control-label col-md-4 col-sm-4 col-xs-12 m-0 text-center">Food Category <span style="color:red">*</span></label>
+                            <div class="col-md-8 col-sm-8 col-xs-12">
+                                <select class="form-control" required ng-model="categoryId">
+                                    <option ng-repeat="x in foodCategoryListDropDownJsonData" value="{{x.Value}}">{{x.Item}}</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="form-group row d-flex align-items-center">
+                            <label class="control-label col-md-4 col-sm-4 col-xs-12 m-0 text-center">Food Image</label>
+                            <div class="col-md-6 col-sm-6 col-xs-6">
+                                <input class="btn" style="width: 100%;text-align: left;border-radius:0px;" type="file" accept=".jpg" ngf-select="ImageUploads($files)" ng-model="fileName" />
+                            </div>
+                            <div class="col-md-2 col-sm-2 col-xs-6">
+                                <img id="foodImage" src="~/Images/FoodImg/{{foodPhotoFileName}}" style="width: 50px; height: 50px; display: block; border: 1px solid black; float: right;" />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="card-footer">
+                <div class="col-md-12 col-sm-12 col-xs-12 d-flex justify-content-end">
+                    <a target="_self" href="@Url.Action("Index", "Home")" class="btn btn-outline-warning btn-icon-split btn-sm">
+                        <span class="icon text-white-50">
+                            <i class="fas fa-times"></i>
+                        </span>
+                        <span class="text">Close</span>
+                    </a> &nbsp;
+                    <a target="_self" href="@Url.Action("Index", "FoodItem")" class="btn btn-outline-secondary btn-sm btn-icon-split">
+                        <span class="icon text-white-50">
+                            <i class="fas fa-sync"></i>
+                        </span>
+                        <span class="text">New</span>
+                    </a> &nbsp;
+                    <button type="button" class="btn btn-outline-primary btn-sm btn-icon-split"
+                            ng-if="!saveMode"
+                            ng-disabled="frmFoodItem.$invalid"
+                            ng-click="clickUpdate()">
+                        <span class="icon text-white-50">
+                            <i class="fas fa-save"></i>
+                        </span>
+                        <span class="text">Update</span>
+                    </button>
+                    <button type="button" class="btn btn-outline-success btn-sm btn-icon-split"
+                            ng-if="saveMode"
+                            ng-disabled="frmFoodItem.$invalid"
+                            ng-click="clickSave()">
+                        <span class="icon text-white-50">
+                            <i class="fas fa-save"></i>
+                        </span>
+                        <span class="text">Save</span>
+                    </button>
+                </div>
+            </div>
+        </form>
+    </div>
+    <div class="card shadow mb-4">
+        <div class="card-header py-3 d-flex justify-content-between align-items-center">
+            <h6 class="font-weight-bold text-primary m-0"><strong>Food List</strong></h6>
+            <div class="card-tools float-end">
+                <div class="input-group input-group-sm" style="width: 300px;">
+                    <div class="col-md-12 col-sm-12 col-xs-12">
+                        <div class="col-md-12 col-sm-12 col-xs-12">
+                            <input class="form-control form-control-sm float-right" style="width:100%;" type="text" placeholder="Search...                                            🔍" name="searchFood" ng-model="searchFood" ng-change="filterFoods()" />
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="card-body">
+            <table class="table table-bordered table-responsive-sm table-sm table-hover">
+                <thead style="color: #525463;">
+                    <tr>
+                        <th>Food Name</th>
+                        <th>Food Price</th>
+                        <th>Stock</th>
+                        <th>Available</th>
+                        <th>Food Image</th>
+                        <th style="width: 40px"></th>
+                        <th style="width: 40px"></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr ng-repeat="item in allFoodItemJsonListData.Data">
+                        <td>{{item.FoodName}}</td>
+                        <td>{{item.FoodPrice}}</td>
+                        <td>{{item.Stock}}</td>
+                        <td ng-style="{'color': item.Available ? 'LimeGreen' : 'red'}">{{item.Available ? 'Yes' : 'No'}}</td>
+                        <td style="text-align: center;">
+                            <img id="foodImage" src="~/Images/FoodImg/{{item.FoodId}}.jpg" style="width: 45px; height: 41px; border: 1px solid black;" />
+                        </td>
+                        <td>
+                            <div class="pull-right">
+                                <button ng-click="clickDelete(item.FoodItemID)" class="btn btn-outline-danger btn-sm" title="Delete">
+                                    <span class="fas fa-trash-alt"></span>
+                                </button>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="pull-right">
+                                <button ng-click="clickToEdit(item)" class="btn btn-outline-primary btn-sm" title="Edit">
+                                    <span class="fas fa-edit"></span>
+                                </button>
+                            </div>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <div class="row" style="margin-top:6px !important;">
+                <div class="col-md-9  col-sm-12 col-xs-12">
+                    <div class="dataTables_info" role="status" aria-live="polite">{{showRecordsInfo}}</div>
+                </div>
+                <div class="col-md-3 col-sm-12 col-xs-12" ng-show="showGrid">
+                    <div class="dataTables_paginate paging_simple_numbers">
+                        <ul class="pagination" style="justify-content:end;">
+                            <li class="paginate_button previous" ng-class="pageIndex > 1 ? 'active' : 'disabled'">
+                                <a href="#" aria-controls="datatable" ng-class="pageIndex > 1 ? 'active' : 'disabled'" class="btn btn-info btn-sm" title="Previous" ng-click="previous($event)"><i class="fas fa-arrow-circle-left"></i></a>
+                            </li> &nbsp;&nbsp;&nbsp;
+                            <li class="paginate_button next" ng-class="pageIndex < allFoodItemJsonListData.LastPageNo ? 'active' : 'disabled'">
+                                <a href="#" aria-controls="datatable" ng-class="pageIndex < allFoodItemJsonListData.LastPageNo ? 'active' : 'disabled'" class="btn btn-info btn-sm" title="Next" ng-click="next($event)"><i class="fas fa-arrow-circle-right"></i></a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+@section scripts {
+    <script src="~/Scripts/ngServices/FoodItemService/foodItemService.js?reload=@DateTime.Now.Date.ToShortDateString()"></script>
+    <script src="~/Scripts/ngServices/FoodOrderService/foodOrderService.js?reload=@DateTime.Now.Date.ToShortDateString()"></script>
+    <script src="~/Scripts/ngControllers/FoodItem/foodItemController.js?reload=@DateTime.Now.Date.ToShortDateString()"></script>
+    <script src="~/Scripts/ngDirectives/int-only-positive-numbers.js"></script>
+}
+
+
+
+

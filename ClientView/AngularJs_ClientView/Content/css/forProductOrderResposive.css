@@ -1,0 +1,41 @@
+﻿.product-item {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+    border: 1px solid #d1e0e0;
+    border-radius: 3px;
+    position: relative;
+    max-width: 100%; /* Ensure it doesn't exceed parent width */
+    box-sizing: border-box; /* Include padding in the width */
+}
+
+img {
+    height: auto; /* Maintain aspect ratio */
+    max-width: 100%; /* Ensure the image fits within the container */
+    margin: 25px auto 10px;
+    display: block;
+}
+
+@media (max-width: 768px) {
+    .product-item {
+        padding: 10px;
+    }
+
+    img {
+        height: auto; /* Adjust image height for smaller screens */
+        width: auto;
+    }
+}
+
+@media (max-width: 576px) {
+    .col-md-4,
+    .col-sm-6,
+    .col-xs-12 {
+        width: 100%; /* Make each item take full width on small screens */
+    }
+
+    .product-item {
+        padding: 8px;
+    }
+}
