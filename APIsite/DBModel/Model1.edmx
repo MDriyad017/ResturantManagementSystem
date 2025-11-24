@@ -1,0 +1,331 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="Resturant_DBContext.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="FoodOrderDetails">
+          <Key>
+            <PropertyRef Name="OrderDetailsId" />
+          </Key>
+          <Property Name="OrderDetailsId" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="OrderID" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="FoodId" Type="bigint" Nullable="false" />
+          <Property Name="Quantity" Type="bigint" Nullable="false" />
+          <Property Name="Price" Type="numeric" Precision="18" Scale="4" Nullable="false" />
+        </EntityType>
+        <EntityType Name="setup_FoodCategory">
+          <Key>
+            <PropertyRef Name="CategoryID" />
+          </Key>
+          <Property Name="CategoryID" Type="bigint" Nullable="false" />
+          <Property Name="CategoryName" Type="varchar" MaxLength="100" Nullable="false" />
+        </EntityType>
+        <EntityType Name="setup_FoodItem">
+          <Key>
+            <PropertyRef Name="FoodItemID" />
+          </Key>
+          <Property Name="FoodItemID" Type="bigint" Nullable="false" />
+          <Property Name="FoodName" Type="varchar" MaxLength="100" Nullable="false" />
+          <Property Name="FoodPrice" Type="numeric" Precision="18" Scale="4" Nullable="false" />
+          <Property Name="Stock" Type="bigint" Nullable="false" />
+          <Property Name="Available" Type="bit" Nullable="false" />
+          <Property Name="CategoryID" Type="bigint" Nullable="false" />
+        </EntityType>
+        <EntityType Name="setup_FoodOrder">
+          <Key>
+            <PropertyRef Name="OrderId" />
+          </Key>
+          <Property Name="OrderId" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="TotalPrice" Type="numeric" Precision="18" Scale="4" Nullable="false" />
+          <Property Name="TableID" Type="int" Nullable="false" />
+          <Property Name="IsPayementDone" Type="bit" />
+        </EntityType>
+        <EntityType Name="TableNo">
+          <Key>
+            <PropertyRef Name="TableId" />
+          </Key>
+          <Property Name="TableId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Table" Type="varchar" MaxLength="10" />
+          <Property Name="IsAvailableTbl" Type="bit" />
+        </EntityType>
+        <Association Name="FK__FoodOrder__FoodI__4D94879B">
+          <End Role="setup_FoodItem" Type="Self.setup_FoodItem" Multiplicity="1" />
+          <End Role="FoodOrderDetails" Type="Self.FoodOrderDetails" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="setup_FoodItem">
+              <PropertyRef Name="FoodItemID" />
+            </Principal>
+            <Dependent Role="FoodOrderDetails">
+              <PropertyRef Name="FoodId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__FoodOrder__Order__4CA06362">
+          <End Role="setup_FoodOrder" Type="Self.setup_FoodOrder" Multiplicity="1" />
+          <End Role="FoodOrderDetails" Type="Self.FoodOrderDetails" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="setup_FoodOrder">
+              <PropertyRef Name="OrderId" />
+            </Principal>
+            <Dependent Role="FoodOrderDetails">
+              <PropertyRef Name="OrderID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__setup_Foo__Categ__1920BF5C">
+          <End Role="setup_FoodCategory" Type="Self.setup_FoodCategory" Multiplicity="1" />
+          <End Role="setup_FoodItem" Type="Self.setup_FoodItem" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="setup_FoodCategory">
+              <PropertyRef Name="CategoryID" />
+            </Principal>
+            <Dependent Role="setup_FoodItem">
+              <PropertyRef Name="CategoryID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__setup_Foo__Table__6FE99F9F">
+          <End Role="TableNo" Type="Self.TableNo" Multiplicity="1" />
+          <End Role="setup_FoodOrder" Type="Self.setup_FoodOrder" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="TableNo">
+              <PropertyRef Name="TableId" />
+            </Principal>
+            <Dependent Role="setup_FoodOrder">
+              <PropertyRef Name="TableID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="Resturant_DBContextStoreContainer">
+          <EntitySet Name="FoodOrderDetails" EntityType="Self.FoodOrderDetails" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="setup_FoodCategory" EntityType="Self.setup_FoodCategory" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="setup_FoodItem" EntityType="Self.setup_FoodItem" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="setup_FoodOrder" EntityType="Self.setup_FoodOrder" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="TableNo" EntityType="Self.TableNo" Schema="dbo" store:Type="Tables" />
+          <AssociationSet Name="FK__FoodOrder__FoodI__4D94879B" Association="Self.FK__FoodOrder__FoodI__4D94879B">
+            <End Role="setup_FoodItem" EntitySet="setup_FoodItem" />
+            <End Role="FoodOrderDetails" EntitySet="FoodOrderDetails" />
+          </AssociationSet>
+          <AssociationSet Name="FK__FoodOrder__Order__4CA06362" Association="Self.FK__FoodOrder__Order__4CA06362">
+            <End Role="setup_FoodOrder" EntitySet="setup_FoodOrder" />
+            <End Role="FoodOrderDetails" EntitySet="FoodOrderDetails" />
+          </AssociationSet>
+          <AssociationSet Name="FK__setup_Foo__Categ__1920BF5C" Association="Self.FK__setup_Foo__Categ__1920BF5C">
+            <End Role="setup_FoodCategory" EntitySet="setup_FoodCategory" />
+            <End Role="setup_FoodItem" EntitySet="setup_FoodItem" />
+          </AssociationSet>
+          <AssociationSet Name="FK__setup_Foo__Table__6FE99F9F" Association="Self.FK__setup_Foo__Table__6FE99F9F">
+            <End Role="TableNo" EntitySet="TableNo" />
+            <End Role="setup_FoodOrder" EntitySet="setup_FoodOrder" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="Resturant_DBContext" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityContainer Name="Resturant_ProjectEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="FoodOrderDetails" EntityType="Resturant_DBContext.FoodOrderDetail" />
+          <EntitySet Name="setup_FoodCategory" EntityType="Resturant_DBContext.setup_FoodCategory" />
+          <EntitySet Name="setup_FoodItem" EntityType="Resturant_DBContext.setup_FoodItem" />
+          <EntitySet Name="setup_FoodOrder" EntityType="Resturant_DBContext.setup_FoodOrder" />
+          <EntitySet Name="TableNoes" EntityType="Resturant_DBContext.TableNo" />
+          <AssociationSet Name="FK__FoodOrder__FoodI__4D94879B" Association="Resturant_DBContext.FK__FoodOrder__FoodI__4D94879B">
+            <End Role="setup_FoodItem" EntitySet="setup_FoodItem" />
+            <End Role="FoodOrderDetail" EntitySet="FoodOrderDetails" />
+          </AssociationSet>
+          <AssociationSet Name="FK__FoodOrder__Order__4CA06362" Association="Resturant_DBContext.FK__FoodOrder__Order__4CA06362">
+            <End Role="setup_FoodOrder" EntitySet="setup_FoodOrder" />
+            <End Role="FoodOrderDetail" EntitySet="FoodOrderDetails" />
+          </AssociationSet>
+          <AssociationSet Name="FK__setup_Foo__Categ__1920BF5C" Association="Resturant_DBContext.FK__setup_Foo__Categ__1920BF5C">
+            <End Role="setup_FoodCategory" EntitySet="setup_FoodCategory" />
+            <End Role="setup_FoodItem" EntitySet="setup_FoodItem" />
+          </AssociationSet>
+          <AssociationSet Name="FK__setup_Foo__Table__6FE99F9F" Association="Resturant_DBContext.FK__setup_Foo__Table__6FE99F9F">
+            <End Role="TableNo" EntitySet="TableNoes" />
+            <End Role="setup_FoodOrder" EntitySet="setup_FoodOrder" />
+          </AssociationSet>
+        </EntityContainer>
+        <EntityType Name="FoodOrderDetail">
+          <Key>
+            <PropertyRef Name="OrderDetailsId" />
+          </Key>
+          <Property Name="OrderDetailsId" Type="Guid" Nullable="false" />
+          <Property Name="OrderID" Type="Guid" Nullable="false" />
+          <Property Name="FoodId" Type="Int64" Nullable="false" />
+          <Property Name="Quantity" Type="Int64" Nullable="false" />
+          <Property Name="Price" Type="Decimal" Nullable="false" Precision="18" Scale="4" />
+          <NavigationProperty Name="setup_FoodItem" Relationship="Resturant_DBContext.FK__FoodOrder__FoodI__4D94879B" FromRole="FoodOrderDetail" ToRole="setup_FoodItem" />
+          <NavigationProperty Name="setup_FoodOrder" Relationship="Resturant_DBContext.FK__FoodOrder__Order__4CA06362" FromRole="FoodOrderDetail" ToRole="setup_FoodOrder" />
+        </EntityType>
+        <EntityType Name="setup_FoodCategory">
+          <Key>
+            <PropertyRef Name="CategoryID" />
+          </Key>
+          <Property Name="CategoryID" Type="Int64" Nullable="false" />
+          <Property Name="CategoryName" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="setup_FoodItem" Relationship="Resturant_DBContext.FK__setup_Foo__Categ__1920BF5C" FromRole="setup_FoodCategory" ToRole="setup_FoodItem" />
+        </EntityType>
+        <EntityType Name="setup_FoodItem">
+          <Key>
+            <PropertyRef Name="FoodItemID" />
+          </Key>
+          <Property Name="FoodItemID" Type="Int64" Nullable="false" />
+          <Property Name="FoodName" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="FoodPrice" Type="Decimal" Nullable="false" Precision="18" Scale="4" />
+          <Property Name="Stock" Type="Int64" Nullable="false" />
+          <Property Name="Available" Type="Boolean" Nullable="false" />
+          <Property Name="CategoryID" Type="Int64" Nullable="false" />
+          <NavigationProperty Name="FoodOrderDetails" Relationship="Resturant_DBContext.FK__FoodOrder__FoodI__4D94879B" FromRole="setup_FoodItem" ToRole="FoodOrderDetail" />
+          <NavigationProperty Name="setup_FoodCategory" Relationship="Resturant_DBContext.FK__setup_Foo__Categ__1920BF5C" FromRole="setup_FoodItem" ToRole="setup_FoodCategory" />
+        </EntityType>
+        <EntityType Name="setup_FoodOrder">
+          <Key>
+            <PropertyRef Name="OrderId" />
+          </Key>
+          <Property Name="OrderId" Type="Guid" Nullable="false" />
+          <Property Name="TotalPrice" Type="Decimal" Nullable="false" Precision="18" Scale="4" />
+          <Property Name="TableID" Type="Int32" Nullable="false" />
+          <Property Name="IsPayementDone" Type="Boolean" />
+          <NavigationProperty Name="FoodOrderDetails" Relationship="Resturant_DBContext.FK__FoodOrder__Order__4CA06362" FromRole="setup_FoodOrder" ToRole="FoodOrderDetail" />
+          <NavigationProperty Name="TableNo" Relationship="Resturant_DBContext.FK__setup_Foo__Table__6FE99F9F" FromRole="setup_FoodOrder" ToRole="TableNo" />
+        </EntityType>
+        <EntityType Name="TableNo">
+          <Key>
+            <PropertyRef Name="TableId" />
+          </Key>
+          <Property Name="TableId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Table" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Name="IsAvailableTbl" Type="Boolean" />
+          <NavigationProperty Name="setup_FoodOrder" Relationship="Resturant_DBContext.FK__setup_Foo__Table__6FE99F9F" FromRole="TableNo" ToRole="setup_FoodOrder" />
+        </EntityType>
+        <Association Name="FK__FoodOrder__FoodI__4D94879B">
+          <End Type="Resturant_DBContext.setup_FoodItem" Role="setup_FoodItem" Multiplicity="1" />
+          <End Type="Resturant_DBContext.FoodOrderDetail" Role="FoodOrderDetail" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="setup_FoodItem">
+              <PropertyRef Name="FoodItemID" />
+            </Principal>
+            <Dependent Role="FoodOrderDetail">
+              <PropertyRef Name="FoodId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__FoodOrder__Order__4CA06362">
+          <End Type="Resturant_DBContext.setup_FoodOrder" Role="setup_FoodOrder" Multiplicity="1" />
+          <End Type="Resturant_DBContext.FoodOrderDetail" Role="FoodOrderDetail" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="setup_FoodOrder">
+              <PropertyRef Name="OrderId" />
+            </Principal>
+            <Dependent Role="FoodOrderDetail">
+              <PropertyRef Name="OrderID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__setup_Foo__Categ__1920BF5C">
+          <End Type="Resturant_DBContext.setup_FoodCategory" Role="setup_FoodCategory" Multiplicity="1" />
+          <End Type="Resturant_DBContext.setup_FoodItem" Role="setup_FoodItem" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="setup_FoodCategory">
+              <PropertyRef Name="CategoryID" />
+            </Principal>
+            <Dependent Role="setup_FoodItem">
+              <PropertyRef Name="CategoryID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__setup_Foo__Table__6FE99F9F">
+          <End Type="Resturant_DBContext.TableNo" Role="TableNo" Multiplicity="1" />
+          <End Type="Resturant_DBContext.setup_FoodOrder" Role="setup_FoodOrder" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="TableNo">
+              <PropertyRef Name="TableId" />
+            </Principal>
+            <Dependent Role="setup_FoodOrder">
+              <PropertyRef Name="TableID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="Resturant_DBContextStoreContainer" CdmEntityContainer="Resturant_ProjectEntities">
+          <EntitySetMapping Name="FoodOrderDetails">
+            <EntityTypeMapping TypeName="Resturant_DBContext.FoodOrderDetail">
+              <MappingFragment StoreEntitySet="FoodOrderDetails">
+                <ScalarProperty Name="Price" ColumnName="Price" />
+                <ScalarProperty Name="Quantity" ColumnName="Quantity" />
+                <ScalarProperty Name="FoodId" ColumnName="FoodId" />
+                <ScalarProperty Name="OrderID" ColumnName="OrderID" />
+                <ScalarProperty Name="OrderDetailsId" ColumnName="OrderDetailsId" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="setup_FoodCategory">
+            <EntityTypeMapping TypeName="Resturant_DBContext.setup_FoodCategory">
+              <MappingFragment StoreEntitySet="setup_FoodCategory">
+                <ScalarProperty Name="CategoryName" ColumnName="CategoryName" />
+                <ScalarProperty Name="CategoryID" ColumnName="CategoryID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="setup_FoodItem">
+            <EntityTypeMapping TypeName="Resturant_DBContext.setup_FoodItem">
+              <MappingFragment StoreEntitySet="setup_FoodItem">
+                <ScalarProperty Name="CategoryID" ColumnName="CategoryID" />
+                <ScalarProperty Name="Available" ColumnName="Available" />
+                <ScalarProperty Name="Stock" ColumnName="Stock" />
+                <ScalarProperty Name="FoodPrice" ColumnName="FoodPrice" />
+                <ScalarProperty Name="FoodName" ColumnName="FoodName" />
+                <ScalarProperty Name="FoodItemID" ColumnName="FoodItemID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="setup_FoodOrder">
+            <EntityTypeMapping TypeName="Resturant_DBContext.setup_FoodOrder">
+              <MappingFragment StoreEntitySet="setup_FoodOrder">
+                <ScalarProperty Name="IsPayementDone" ColumnName="IsPayementDone" />
+                <ScalarProperty Name="TableID" ColumnName="TableID" />
+                <ScalarProperty Name="TotalPrice" ColumnName="TotalPrice" />
+                <ScalarProperty Name="OrderId" ColumnName="OrderId" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="TableNoes">
+            <EntityTypeMapping TypeName="Resturant_DBContext.TableNo">
+              <MappingFragment StoreEntitySet="TableNo">
+                <ScalarProperty Name="IsAvailableTbl" ColumnName="IsAvailableTbl" />
+                <ScalarProperty Name="Table" ColumnName="Table" />
+                <ScalarProperty Name="TableId" ColumnName="TableId" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="true" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

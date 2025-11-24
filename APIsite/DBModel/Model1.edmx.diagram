@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="3c7ca1022b4d42f1965f22360fe5b3e6" Name="Diagram1">
+        <EntityTypeShape EntityType="Resturant_DBContext.FoodOrderDetail" Width="1.5" PointX="5.25" PointY="1" />
+        <EntityTypeShape EntityType="Resturant_DBContext.setup_FoodCategory" Width="1.5" PointX="0.75" PointY="5.375" />
+        <EntityTypeShape EntityType="Resturant_DBContext.setup_FoodItem" Width="1.5" PointX="3" PointY="4.875" />
+        <EntityTypeShape EntityType="Resturant_DBContext.setup_FoodOrder" Width="1.5" PointX="3" PointY="1" />
+        <EntityTypeShape EntityType="Resturant_DBContext.TableNo" Width="1.5" PointX="0.75" PointY="1.25" />
+        <AssociationConnector Association="Resturant_DBContext.FK__FoodOrder__FoodI__4D94879B" />
+        <AssociationConnector Association="Resturant_DBContext.FK__FoodOrder__Order__4CA06362" />
+        <AssociationConnector Association="Resturant_DBContext.FK__setup_Foo__Categ__1920BF5C" />
+        <AssociationConnector Association="Resturant_DBContext.FK__setup_Foo__Table__6FE99F9F" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>
