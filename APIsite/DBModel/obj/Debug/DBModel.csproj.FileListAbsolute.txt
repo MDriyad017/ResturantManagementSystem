@@ -10,3 +10,15 @@ F:\Riyad\solu_RMS\DBModel\obj\Debug\DBModel.csproj.CoreCompileInputs.cache
 F:\Riyad\solu_RMS\DBModel\obj\Debug\DBModel.csproj.Up2Date
 F:\Riyad\solu_RMS\DBModel\obj\Debug\DBModel.dll
 F:\Riyad\solu_RMS\DBModel\obj\Debug\DBModel.pdb
+F:\Riyad\ResturantManagementSystem\APIsite\DBModel\bin\Debug\DBModel.dll.config
+F:\Riyad\ResturantManagementSystem\APIsite\DBModel\bin\Debug\DBModel.dll
+F:\Riyad\ResturantManagementSystem\APIsite\DBModel\bin\Debug\DBModel.pdb
+F:\Riyad\ResturantManagementSystem\APIsite\DBModel\bin\Debug\EntityFramework.dll
+F:\Riyad\ResturantManagementSystem\APIsite\DBModel\bin\Debug\EntityFramework.SqlServer.dll
+F:\Riyad\ResturantManagementSystem\APIsite\DBModel\bin\Debug\EntityFramework.xml
+F:\Riyad\ResturantManagementSystem\APIsite\DBModel\bin\Debug\EntityFramework.SqlServer.xml
+F:\Riyad\ResturantManagementSystem\APIsite\DBModel\obj\Debug\DBModel.csproj.AssemblyReference.cache
+F:\Riyad\ResturantManagementSystem\APIsite\DBModel\obj\Debug\DBModel.csproj.CoreCompileInputs.cache
+F:\Riyad\ResturantManagementSystem\APIsite\DBModel\obj\Debug\DBModel.csproj.Up2Date
+F:\Riyad\ResturantManagementSystem\APIsite\DBModel\obj\Debug\DBModel.dll
+F:\Riyad\ResturantManagementSystem\APIsite\DBModel\obj\Debug\DBModel.pdb

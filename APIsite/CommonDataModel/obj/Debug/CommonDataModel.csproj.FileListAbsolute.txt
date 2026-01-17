@@ -10,3 +10,15 @@ F:\Riyad\solu_RMS\CommonDataModel\obj\Debug\CommonDataModel.csproj.CoreCompileIn
 F:\Riyad\solu_RMS\CommonDataModel\obj\Debug\CommonDa.4367FC4F.Up2Date
 F:\Riyad\solu_RMS\CommonDataModel\obj\Debug\CommonDataModel.dll
 F:\Riyad\solu_RMS\CommonDataModel\obj\Debug\CommonDataModel.pdb
+F:\Riyad\ResturantManagementSystem\APIsite\CommonDataModel\bin\Debug\CommonDataModel.dll.config
+F:\Riyad\ResturantManagementSystem\APIsite\CommonDataModel\bin\Debug\CommonDataModel.dll
+F:\Riyad\ResturantManagementSystem\APIsite\CommonDataModel\bin\Debug\CommonDataModel.pdb
+F:\Riyad\ResturantManagementSystem\APIsite\CommonDataModel\bin\Debug\EntityFramework.dll
+F:\Riyad\ResturantManagementSystem\APIsite\CommonDataModel\bin\Debug\EntityFramework.SqlServer.dll
+F:\Riyad\ResturantManagementSystem\APIsite\CommonDataModel\bin\Debug\EntityFramework.xml
+F:\Riyad\ResturantManagementSystem\APIsite\CommonDataModel\bin\Debug\EntityFramework.SqlServer.xml
+F:\Riyad\ResturantManagementSystem\APIsite\CommonDataModel\obj\Debug\CommonDataModel.csproj.AssemblyReference.cache
+F:\Riyad\ResturantManagementSystem\APIsite\CommonDataModel\obj\Debug\CommonDataModel.csproj.CoreCompileInputs.cache
+F:\Riyad\ResturantManagementSystem\APIsite\CommonDataModel\obj\Debug\CommonDa.4367FC4F.Up2Date
+F:\Riyad\ResturantManagementSystem\APIsite\CommonDataModel\obj\Debug\CommonDataModel.dll
+F:\Riyad\ResturantManagementSystem\APIsite\CommonDataModel\obj\Debug\CommonDataModel.pdb
