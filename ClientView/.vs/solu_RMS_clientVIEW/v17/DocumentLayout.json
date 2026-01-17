@@ -3,11 +3,71 @@
   "WorkspaceRootPath": "F:\\Riyad\\ResturantManagementSystem\\ClientView\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{15107D12-83AE-4425-A152-B876E93C18B8}|AngularJs_ClientView\\AngularJs_ClientView.csproj|f:\\riyad\\resturantmanagementsystem\\clientview\\angularjs_clientview\\app_start\\routeconfig.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{15107D12-83AE-4425-A152-B876E93C18B8}|AngularJs_ClientView\\AngularJs_ClientView.csproj|solutionrelative:angularjs_clientview\\app_start\\routeconfig.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{15107D12-83AE-4425-A152-B876E93C18B8}|AngularJs_ClientView\\AngularJs_ClientView.csproj|f:\\riyad\\resturantmanagementsystem\\clientview\\angularjs_clientview\\app_start\\bundleconfig.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{15107D12-83AE-4425-A152-B876E93C18B8}|AngularJs_ClientView\\AngularJs_ClientView.csproj|solutionrelative:angularjs_clientview\\app_start\\bundleconfig.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{15107D12-83AE-4425-A152-B876E93C18B8}|AngularJs_ClientView\\AngularJs_ClientView.csproj|f:\\riyad\\resturantmanagementsystem\\clientview\\angularjs_clientview\\app_start\\filterconfig.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{15107D12-83AE-4425-A152-B876E93C18B8}|AngularJs_ClientView\\AngularJs_ClientView.csproj|solutionrelative:angularjs_clientview\\app_start\\filterconfig.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{15107D12-83AE-4425-A152-B876E93C18B8}|AngularJs_ClientView\\AngularJs_ClientView.csproj|f:\\riyad\\resturantmanagementsystem\\clientview\\angularjs_clientview\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{15107D12-83AE-4425-A152-B876E93C18B8}|AngularJs_ClientView\\AngularJs_ClientView.csproj|solutionrelative:angularjs_clientview\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{15107D12-83AE-4425-A152-B876E93C18B8}|AngularJs_ClientView\\AngularJs_ClientView.csproj|F:\\Riyad\\ResturantManagementSystem\\ClientView\\angularjs_clientview\\views\\fooditem\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{15107D12-83AE-4425-A152-B876E93C18B8}|AngularJs_ClientView\\AngularJs_ClientView.csproj|solutionrelative:angularjs_clientview\\views\\fooditem\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{15107D12-83AE-4425-A152-B876E93C18B8}|AngularJs_ClientView\\AngularJs_ClientView.csproj|F:\\Riyad\\ResturantManagementSystem\\ClientView\\angularjs_clientview\\scripts\\ngcontrollers\\fooditem\\fooditemcontroller.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
+      "RelativeMoniker": "D:0:0:{15107D12-83AE-4425-A152-B876E93C18B8}|AngularJs_ClientView\\AngularJs_ClientView.csproj|solutionrelative:angularjs_clientview\\scripts\\ngcontrollers\\fooditem\\fooditemcontroller.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{15107D12-83AE-4425-A152-B876E93C18B8}|AngularJs_ClientView\\AngularJs_ClientView.csproj|F:\\Riyad\\ResturantManagementSystem\\ClientView\\angularjs_clientview\\scripts\\ngcontrollers\\foodorder\\foodordercontroller.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
+      "RelativeMoniker": "D:0:0:{15107D12-83AE-4425-A152-B876E93C18B8}|AngularJs_ClientView\\AngularJs_ClientView.csproj|solutionrelative:angularjs_clientview\\scripts\\ngcontrollers\\foodorder\\foodordercontroller.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{15107D12-83AE-4425-A152-B876E93C18B8}|AngularJs_ClientView\\AngularJs_ClientView.csproj|F:\\Riyad\\ResturantManagementSystem\\ClientView\\angularjs_clientview\\views\\foodorder\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{15107D12-83AE-4425-A152-B876E93C18B8}|AngularJs_ClientView\\AngularJs_ClientView.csproj|solutionrelative:angularjs_clientview\\views\\foodorder\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{15107D12-83AE-4425-A152-B876E93C18B8}|AngularJs_ClientView\\AngularJs_ClientView.csproj|F:\\Riyad\\ResturantManagementSystem\\ClientView\\angularjs_clientview\\scripts\\ngcontrollers\\home\\homecontroller.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
+      "RelativeMoniker": "D:0:0:{15107D12-83AE-4425-A152-B876E93C18B8}|AngularJs_ClientView\\AngularJs_ClientView.csproj|solutionrelative:angularjs_clientview\\scripts\\ngcontrollers\\home\\homecontroller.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{15107D12-83AE-4425-A152-B876E93C18B8}|AngularJs_ClientView\\AngularJs_ClientView.csproj|F:\\Riyad\\ResturantManagementSystem\\ClientView\\angularjs_clientview\\scripts\\ngservices\\foodorderservice\\foodorderservice.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
+      "RelativeMoniker": "D:0:0:{15107D12-83AE-4425-A152-B876E93C18B8}|AngularJs_ClientView\\AngularJs_ClientView.csproj|solutionrelative:angularjs_clientview\\scripts\\ngservices\\foodorderservice\\foodorderservice.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{15107D12-83AE-4425-A152-B876E93C18B8}|AngularJs_ClientView\\AngularJs_ClientView.csproj|F:\\Riyad\\ResturantManagementSystem\\ClientView\\angularjs_clientview\\views\\paymentprocess\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{15107D12-83AE-4425-A152-B876E93C18B8}|AngularJs_ClientView\\AngularJs_ClientView.csproj|solutionrelative:angularjs_clientview\\views\\paymentprocess\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{15107D12-83AE-4425-A152-B876E93C18B8}|AngularJs_ClientView\\AngularJs_ClientView.csproj|F:\\Riyad\\ResturantManagementSystem\\ClientView\\angularjs_clientview\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{15107D12-83AE-4425-A152-B876E93C18B8}|AngularJs_ClientView\\AngularJs_ClientView.csproj|solutionrelative:angularjs_clientview\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{15107D12-83AE-4425-A152-B876E93C18B8}|AngularJs_ClientView\\AngularJs_ClientView.csproj|F:\\Riyad\\ResturantManagementSystem\\ClientView\\angularjs_clientview\\views\\foodcategory\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{15107D12-83AE-4425-A152-B876E93C18B8}|AngularJs_ClientView\\AngularJs_ClientView.csproj|solutionrelative:angularjs_clientview\\views\\foodcategory\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{15107D12-83AE-4425-A152-B876E93C18B8}|AngularJs_ClientView\\AngularJs_ClientView.csproj|f:\\riyad\\resturantmanagementsystem\\clientview\\angularjs_clientview\\controllers\\paymentprocesscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{15107D12-83AE-4425-A152-B876E93C18B8}|AngularJs_ClientView\\AngularJs_ClientView.csproj|F:\\Riyad\\ResturantManagementSystem\\ClientView\\angularjs_clientview\\scripts\\ngcontrollers\\payment\\paymentcontroller.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
+      "RelativeMoniker": "D:0:0:{15107D12-83AE-4425-A152-B876E93C18B8}|AngularJs_ClientView\\AngularJs_ClientView.csproj|solutionrelative:angularjs_clientview\\scripts\\ngcontrollers\\payment\\paymentcontroller.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{15107D12-83AE-4425-A152-B876E93C18B8}|AngularJs_ClientView\\AngularJs_ClientView.csproj|F:\\Riyad\\ResturantManagementSystem\\ClientView\\angularjs_clientview\\scripts\\ngservices\\fooditemservice\\fooditemservice.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
+      "RelativeMoniker": "D:0:0:{15107D12-83AE-4425-A152-B876E93C18B8}|AngularJs_ClientView\\AngularJs_ClientView.csproj|solutionrelative:angularjs_clientview\\scripts\\ngservices\\fooditemservice\\fooditemservice.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{15107D12-83AE-4425-A152-B876E93C18B8}|AngularJs_ClientView\\AngularJs_ClientView.csproj|F:\\Riyad\\ResturantManagementSystem\\ClientView\\angularjs_clientview\\controllers\\foodordercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{15107D12-83AE-4425-A152-B876E93C18B8}|AngularJs_ClientView\\AngularJs_ClientView.csproj|solutionrelative:angularjs_clientview\\controllers\\foodordercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{15107D12-83AE-4425-A152-B876E93C18B8}|AngularJs_ClientView\\AngularJs_ClientView.csproj|F:\\Riyad\\ResturantManagementSystem\\ClientView\\angularjs_clientview\\controllers\\paymentprocesscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{15107D12-83AE-4425-A152-B876E93C18B8}|AngularJs_ClientView\\AngularJs_ClientView.csproj|solutionrelative:angularjs_clientview\\controllers\\paymentprocesscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
@@ -18,11 +78,185 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 4,
           "Children": [
             {
               "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "_Layout.cshtml",
+              "DocumentMoniker": "F:\\Riyad\\ResturantManagementSystem\\ClientView\\AngularJs_ClientView\\Views\\Shared\\_Layout.cshtml",
+              "RelativeDocumentMoniker": "AngularJs_ClientView\\Views\\Shared\\_Layout.cshtml",
+              "ToolTip": "F:\\Riyad\\ResturantManagementSystem\\ClientView\\AngularJs_ClientView\\Views\\Shared\\_Layout.cshtml",
+              "RelativeToolTip": "AngularJs_ClientView\\Views\\Shared\\_Layout.cshtml",
+              "ViewState": "AgIAAIcBAAAAAAAAAAAAAEoAAAAUAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-01-17T04:39:27.21Z",
+              "IsPinned": true,
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "F:\\Riyad\\ResturantManagementSystem\\ClientView\\AngularJs_ClientView\\Views\\Home\\Index.cshtml",
+              "RelativeDocumentMoniker": "AngularJs_ClientView\\Views\\Home\\Index.cshtml",
+              "ToolTip": "F:\\Riyad\\ResturantManagementSystem\\ClientView\\AngularJs_ClientView\\Views\\Home\\Index.cshtml",
+              "RelativeToolTip": "AngularJs_ClientView\\Views\\Home\\Index.cshtml",
+              "ViewState": "AgIAAEIAAAAAAAAAAAAAAFkAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-01-17T04:52:39.332Z",
+              "IsPinned": true
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "FilterConfig.cs",
+              "DocumentMoniker": "F:\\Riyad\\ResturantManagementSystem\\ClientView\\AngularJs_ClientView\\App_Start\\FilterConfig.cs",
+              "RelativeDocumentMoniker": "AngularJs_ClientView\\App_Start\\FilterConfig.cs",
+              "ToolTip": "F:\\Riyad\\ResturantManagementSystem\\ClientView\\AngularJs_ClientView\\App_Start\\FilterConfig.cs",
+              "RelativeToolTip": "AngularJs_ClientView\\App_Start\\FilterConfig.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-17T07:43:52.738Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 1,
+              "Title": "BundleConfig.cs",
+              "DocumentMoniker": "F:\\Riyad\\ResturantManagementSystem\\ClientView\\AngularJs_ClientView\\App_Start\\BundleConfig.cs",
+              "RelativeDocumentMoniker": "AngularJs_ClientView\\App_Start\\BundleConfig.cs",
+              "ToolTip": "F:\\Riyad\\ResturantManagementSystem\\ClientView\\AngularJs_ClientView\\App_Start\\BundleConfig.cs",
+              "RelativeToolTip": "AngularJs_ClientView\\App_Start\\BundleConfig.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-17T07:43:44.43Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "RouteConfig.cs",
+              "DocumentMoniker": "F:\\Riyad\\ResturantManagementSystem\\ClientView\\AngularJs_ClientView\\App_Start\\RouteConfig.cs",
+              "RelativeDocumentMoniker": "AngularJs_ClientView\\App_Start\\RouteConfig.cs",
+              "ToolTip": "F:\\Riyad\\ResturantManagementSystem\\ClientView\\AngularJs_ClientView\\App_Start\\RouteConfig.cs",
+              "RelativeToolTip": "AngularJs_ClientView\\App_Start\\RouteConfig.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABcAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-17T07:41:47.95Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "foodItemController.js",
+              "DocumentMoniker": "F:\\Riyad\\ResturantManagementSystem\\ClientView\\AngularJs_ClientView\\Scripts\\ngControllers\\FoodItem\\foodItemController.js",
+              "RelativeDocumentMoniker": "AngularJs_ClientView\\Scripts\\ngControllers\\FoodItem\\foodItemController.js",
+              "ToolTip": "F:\\Riyad\\ResturantManagementSystem\\ClientView\\AngularJs_ClientView\\Scripts\\ngControllers\\FoodItem\\foodItemController.js",
+              "RelativeToolTip": "AngularJs_ClientView\\Scripts\\ngControllers\\FoodItem\\foodItemController.js",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
+              "WhenOpened": "2026-01-17T04:48:25.097Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "paymentController.js",
+              "DocumentMoniker": "F:\\Riyad\\ResturantManagementSystem\\ClientView\\AngularJs_ClientView\\Scripts\\ngControllers\\Payment\\paymentController.js",
+              "RelativeDocumentMoniker": "AngularJs_ClientView\\Scripts\\ngControllers\\Payment\\paymentController.js",
+              "ToolTip": "F:\\Riyad\\ResturantManagementSystem\\ClientView\\AngularJs_ClientView\\Scripts\\ngControllers\\Payment\\paymentController.js",
+              "RelativeToolTip": "AngularJs_ClientView\\Scripts\\ngControllers\\Payment\\paymentController.js",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
+              "WhenOpened": "2026-01-17T06:04:07.181Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "foodItemService.js",
+              "DocumentMoniker": "F:\\Riyad\\ResturantManagementSystem\\ClientView\\AngularJs_ClientView\\Scripts\\ngServices\\FoodItemService\\foodItemService.js",
+              "RelativeDocumentMoniker": "AngularJs_ClientView\\Scripts\\ngServices\\FoodItemService\\foodItemService.js",
+              "ToolTip": "F:\\Riyad\\ResturantManagementSystem\\ClientView\\AngularJs_ClientView\\Scripts\\ngServices\\FoodItemService\\foodItemService.js",
+              "RelativeToolTip": "AngularJs_ClientView\\Scripts\\ngServices\\FoodItemService\\foodItemService.js",
+              "ViewState": "AgIAAGcAAAAAAAAAAAAYwAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
+              "WhenOpened": "2026-01-17T05:54:03.059Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "homeController.js",
+              "DocumentMoniker": "F:\\Riyad\\ResturantManagementSystem\\ClientView\\AngularJs_ClientView\\Scripts\\ngControllers\\Home\\homeController.js",
+              "RelativeDocumentMoniker": "AngularJs_ClientView\\Scripts\\ngControllers\\Home\\homeController.js",
+              "ToolTip": "F:\\Riyad\\ResturantManagementSystem\\ClientView\\AngularJs_ClientView\\Scripts\\ngControllers\\Home\\homeController.js",
+              "RelativeToolTip": "AngularJs_ClientView\\Scripts\\ngControllers\\Home\\homeController.js",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
+              "WhenOpened": "2026-01-17T05:51:13.697Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "foodOrderService.js",
+              "DocumentMoniker": "F:\\Riyad\\ResturantManagementSystem\\ClientView\\AngularJs_ClientView\\Scripts\\ngServices\\FoodOrderService\\foodOrderService.js",
+              "RelativeDocumentMoniker": "AngularJs_ClientView\\Scripts\\ngServices\\FoodOrderService\\foodOrderService.js",
+              "ToolTip": "F:\\Riyad\\ResturantManagementSystem\\ClientView\\AngularJs_ClientView\\Scripts\\ngServices\\FoodOrderService\\foodOrderService.js",
+              "RelativeToolTip": "AngularJs_ClientView\\Scripts\\ngServices\\FoodOrderService\\foodOrderService.js",
+              "ViewState": "AgIAABIAAAAAAAAAAAAAABcAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
+              "WhenOpened": "2026-01-17T05:40:18.659Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "foodOrderController.js",
+              "DocumentMoniker": "F:\\Riyad\\ResturantManagementSystem\\ClientView\\AngularJs_ClientView\\Scripts\\ngControllers\\FoodOrder\\foodOrderController.js",
+              "RelativeDocumentMoniker": "AngularJs_ClientView\\Scripts\\ngControllers\\FoodOrder\\foodOrderController.js",
+              "ToolTip": "F:\\Riyad\\ResturantManagementSystem\\ClientView\\AngularJs_ClientView\\Scripts\\ngControllers\\FoodOrder\\foodOrderController.js",
+              "RelativeToolTip": "AngularJs_ClientView\\Scripts\\ngControllers\\FoodOrder\\foodOrderController.js",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
+              "WhenOpened": "2026-01-17T05:16:07.846Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "F:\\Riyad\\ResturantManagementSystem\\ClientView\\AngularJs_ClientView\\Views\\FoodOrder\\Index.cshtml",
+              "RelativeDocumentMoniker": "AngularJs_ClientView\\Views\\FoodOrder\\Index.cshtml",
+              "ToolTip": "F:\\Riyad\\ResturantManagementSystem\\ClientView\\AngularJs_ClientView\\Views\\FoodOrder\\Index.cshtml",
+              "RelativeToolTip": "AngularJs_ClientView\\Views\\FoodOrder\\Index.cshtml",
+              "ViewState": "AgIAAKIAAAAAAAAAAAAAALYAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-01-17T04:47:45.189Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "FoodOrderController.cs",
+              "DocumentMoniker": "F:\\Riyad\\ResturantManagementSystem\\ClientView\\AngularJs_ClientView\\Controllers\\FoodOrderController.cs",
+              "RelativeDocumentMoniker": "AngularJs_ClientView\\Controllers\\FoodOrderController.cs",
+              "ToolTip": "F:\\Riyad\\ResturantManagementSystem\\ClientView\\AngularJs_ClientView\\Controllers\\FoodOrderController.cs",
+              "RelativeToolTip": "AngularJs_ClientView\\Controllers\\FoodOrderController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAfAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-17T04:47:40.682Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "F:\\Riyad\\ResturantManagementSystem\\ClientView\\AngularJs_ClientView\\Views\\PaymentProcess\\Index.cshtml",
+              "RelativeDocumentMoniker": "AngularJs_ClientView\\Views\\PaymentProcess\\Index.cshtml",
+              "ToolTip": "F:\\Riyad\\ResturantManagementSystem\\ClientView\\AngularJs_ClientView\\Views\\PaymentProcess\\Index.cshtml",
+              "RelativeToolTip": "AngularJs_ClientView\\Views\\PaymentProcess\\Index.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAFEAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-01-17T05:11:04.062Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
               "Title": "PaymentProcessController.cs",
               "DocumentMoniker": "F:\\Riyad\\ResturantManagementSystem\\ClientView\\AngularJs_ClientView\\Controllers\\PaymentProcessController.cs",
               "RelativeDocumentMoniker": "AngularJs_ClientView\\Controllers\\PaymentProcessController.cs",
@@ -30,21 +264,31 @@
               "RelativeToolTip": "AngularJs_ClientView\\Controllers\\PaymentProcessController.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-22T07:37:25.698Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-22T07:37:25.698Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 4,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "F:\\Riyad\\ResturantManagementSystem\\ClientView\\AngularJs_ClientView\\Views\\FoodItem\\Index.cshtml",
+              "RelativeDocumentMoniker": "AngularJs_ClientView\\Views\\FoodItem\\Index.cshtml",
+              "ToolTip": "F:\\Riyad\\ResturantManagementSystem\\ClientView\\AngularJs_ClientView\\Views\\FoodItem\\Index.cshtml",
+              "RelativeToolTip": "AngularJs_ClientView\\Views\\FoodItem\\Index.cshtml",
+              "ViewState": "AgIAAJIAAAAAAAAAAAApwKIAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-01-17T04:47:31.608Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
               "Title": "Index.cshtml",
               "DocumentMoniker": "F:\\Riyad\\ResturantManagementSystem\\ClientView\\AngularJs_ClientView\\Views\\FoodCategory\\Index.cshtml",
               "RelativeDocumentMoniker": "AngularJs_ClientView\\Views\\FoodCategory\\Index.cshtml",
               "ToolTip": "F:\\Riyad\\ResturantManagementSystem\\ClientView\\AngularJs_ClientView\\Views\\FoodCategory\\Index.cshtml",
               "RelativeToolTip": "AngularJs_ClientView\\Views\\FoodCategory\\Index.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAABIAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-04-21T09:17:21.702Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-21T09:17:21.702Z"
             }
           ]
         }

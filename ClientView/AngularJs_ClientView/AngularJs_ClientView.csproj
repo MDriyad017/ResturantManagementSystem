@@ -177,6 +177,8 @@
     <Content Include="Scripts\ngControllers\FoodCategory\foodCategoryContoller.js" />
     <Content Include="Scripts\ngControllers\FoodItem\foodItemController.js" />
     <Content Include="Scripts\ngControllers\FoodOrder\foodOrderController.js" />
+    <Content Include="Scripts\ngControllers\Home\homeController.js" />
+    <Content Include="Scripts\ngControllers\Payment\paymentController.js" />
     <Content Include="Scripts\ngDirectives\int-only-positive-numbers.js" />
     <Content Include="Scripts\ngServices\FoodCategoryService\foodCategoryService.js" />
     <Content Include="Scripts\ngServices\FoodItemService\foodItemService.js" />
