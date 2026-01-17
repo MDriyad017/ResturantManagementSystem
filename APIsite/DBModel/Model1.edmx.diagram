@@ -14,6 +14,8 @@
         <AssociationConnector Association="Resturant_DBContext.FK__FoodOrder__Order__4CA06362" />
         <AssociationConnector Association="Resturant_DBContext.FK__setup_Foo__Categ__1920BF5C" />
         <AssociationConnector Association="Resturant_DBContext.FK__setup_Foo__Table__6FE99F9F" />
+        <EntityTypeShape EntityType="Resturant_DBContext.Role" Width="1.5" PointX="5.375" PointY="4.75" />
+        <EntityTypeShape EntityType="Resturant_DBContext.User" Width="1.5" PointX="7.375" PointY="0.75" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

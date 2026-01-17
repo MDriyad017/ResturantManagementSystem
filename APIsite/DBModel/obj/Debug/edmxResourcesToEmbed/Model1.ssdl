@@ -10,6 +10,13 @@
     <Property Name="Quantity" Type="bigint" Nullable="false" />
     <Property Name="Price" Type="numeric" Precision="18" Scale="4" Nullable="false" />
   </EntityType>
+  <EntityType Name="Roles">
+    <Key>
+      <PropertyRef Name="RoleId" />
+    </Key>
+    <Property Name="RoleId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="RoleName" Type="nvarchar" MaxLength="50" Nullable="false" />
+  </EntityType>
   <EntityType Name="setup_FoodCategory">
     <Key>
       <PropertyRef Name="CategoryID" />
@@ -44,6 +51,17 @@
     <Property Name="TableId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
     <Property Name="Table" Type="varchar" MaxLength="10" />
     <Property Name="IsAvailableTbl" Type="bit" />
+  </EntityType>
+  <EntityType Name="Users">
+    <Key>
+      <PropertyRef Name="UserId" />
+    </Key>
+    <Property Name="UserId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="FullName" Type="nvarchar" MaxLength="100" Nullable="false" />
+    <Property Name="UserName" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="PasswordHash" Type="nvarchar" MaxLength="256" Nullable="false" />
+    <Property Name="RoleId" Type="int" Nullable="false" />
+    <Property Name="IsActive" Type="bit" />
   </EntityType>
   <Association Name="FK__FoodOrder__FoodI__4D94879B">
     <End Role="setup_FoodItem" Type="Self.setup_FoodItem" Multiplicity="1" />
@@ -95,10 +113,12 @@
   </Association>
   <EntityContainer Name="Resturant_DBContextStoreContainer">
     <EntitySet Name="FoodOrderDetails" EntityType="Self.FoodOrderDetails" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Roles" EntityType="Self.Roles" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="setup_FoodCategory" EntityType="Self.setup_FoodCategory" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="setup_FoodItem" EntityType="Self.setup_FoodItem" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="setup_FoodOrder" EntityType="Self.setup_FoodOrder" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="TableNo" EntityType="Self.TableNo" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Users" EntityType="Self.Users" Schema="dbo" store:Type="Tables" />
     <AssociationSet Name="FK__FoodOrder__FoodI__4D94879B" Association="Self.FK__FoodOrder__FoodI__4D94879B">
       <End Role="setup_FoodItem" EntitySet="setup_FoodItem" />
       <End Role="FoodOrderDetails" EntitySet="FoodOrderDetails" />

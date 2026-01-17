@@ -30,5 +30,7 @@ namespace DBModel
         public virtual DbSet<setup_FoodItem> setup_FoodItem { get; set; }
         public virtual DbSet<setup_FoodOrder> setup_FoodOrder { get; set; }
         public virtual DbSet<TableNo> TableNoes { get; set; }
+        public virtual DbSet<Role> Roles { get; set; }
+        public virtual DbSet<User> Users { get; set; }
     }
 }

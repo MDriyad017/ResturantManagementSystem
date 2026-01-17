@@ -1,0 +1,21 @@
+﻿@{
+    ViewBag.Title = "Login";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="container mt-5" ng-controller="loginController">
+    <div class="card col-md-4 mx-auto">
+        <div class="card-header text-center">Login</div>
+        <div class="card-body">
+            <input type="text" class="form-control mb-2" ng-model="username" placeholder="Username" />
+            <input type="password" class="form-control mb-2" ng-model="password" placeholder="Password" />
+            <button class="btn btn-primary w-100" ng-click="login()">Login</button>
+        </div>
+    </div>
+</div>
+
+@section scripts {
+    <script src="~/Scripts/ngServices/Authentication/authService.js?reload=@DateTime.Now.Date.ToShortDateString()"></script>
+    <script src="~/Scripts/ngControllers/Login/loginController.js?reload=@DateTime.Now.Date.ToShortDateString()"></script>
+}
+

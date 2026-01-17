@@ -178,8 +178,11 @@
     <Content Include="Scripts\ngControllers\FoodItem\foodItemController.js" />
     <Content Include="Scripts\ngControllers\FoodOrder\foodOrderController.js" />
     <Content Include="Scripts\ngControllers\Home\homeController.js" />
+    <Content Include="Scripts\ngControllers\Login\loginController.js" />
     <Content Include="Scripts\ngControllers\Payment\paymentController.js" />
     <Content Include="Scripts\ngDirectives\int-only-positive-numbers.js" />
+    <Content Include="Scripts\ngServices\Authentication\authService.js" />
+    <Content Include="Scripts\ngServices\authInterceptor.js" />
     <Content Include="Scripts\ngServices\FoodCategoryService\foodCategoryService.js" />
     <Content Include="Scripts\ngServices\FoodItemService\foodItemService.js" />
     <Content Include="Scripts\ngServices\FoodOrderService\foodOrderService.js" />
@@ -1878,6 +1881,7 @@
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\FoodCategoryController.cs" />
     <Compile Include="Controllers\FoodItemController.cs" />
     <Compile Include="Controllers\FoodOrderController.cs" />
@@ -2096,6 +2100,7 @@
     <Content Include="Views\FoodOrder\Index.cshtml" />
     <Content Include="Views\Table\Index.cshtml" />
     <Content Include="Views\PaymentProcess\Index.cshtml" />
+    <Content Include="Views\Account\Login.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

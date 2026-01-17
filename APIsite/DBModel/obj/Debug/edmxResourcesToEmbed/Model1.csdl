@@ -22,6 +22,8 @@
       <End Role="TableNo" EntitySet="TableNoes" />
       <End Role="setup_FoodOrder" EntitySet="setup_FoodOrder" />
     </AssociationSet>
+    <EntitySet Name="Roles" EntityType="Resturant_DBContext.Role" />
+    <EntitySet Name="Users" EntityType="Resturant_DBContext.User" />
   </EntityContainer>
   <EntityType Name="FoodOrderDetail">
     <Key>
@@ -124,4 +126,22 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
+  <EntityType Name="Role">
+    <Key>
+      <PropertyRef Name="RoleId" />
+    </Key>
+    <Property Name="RoleId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="RoleName" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="User">
+    <Key>
+      <PropertyRef Name="UserId" />
+    </Key>
+    <Property Name="UserId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="FullName" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="UserName" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="PasswordHash" Type="String" Nullable="false" MaxLength="256" FixedLength="false" Unicode="true" />
+    <Property Name="RoleId" Type="Int32" Nullable="false" />
+    <Property Name="IsActive" Type="Boolean" />
+  </EntityType>
 </Schema>
