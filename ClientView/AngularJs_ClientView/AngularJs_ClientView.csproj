@@ -132,6 +132,7 @@
     <Content Include="Content\bootstrap.rtl.min.css" />
     <Content Include="Content\css\adminLTE.css" />
     <Content Include="Content\css\angular-confirm.css" />
+    <Content Include="Content\css\customLayout.css" />
     <Content Include="Content\css\forProductOrderResposive.css" />
     <Content Include="Content\css\menuResponsive.css" />
     <Content Include="Content\css\nprogress.css" />
@@ -178,14 +179,17 @@
     <Content Include="Scripts\ngControllers\FoodItem\foodItemController.js" />
     <Content Include="Scripts\ngControllers\FoodOrder\foodOrderController.js" />
     <Content Include="Scripts\ngControllers\Home\homeController.js" />
+    <Content Include="Scripts\ngControllers\Layout\layoutController.js" />
     <Content Include="Scripts\ngControllers\Login\loginController.js" />
     <Content Include="Scripts\ngControllers\Payment\paymentController.js" />
+    <Content Include="Scripts\ngControllers\Registration\registerController.js" />
     <Content Include="Scripts\ngDirectives\int-only-positive-numbers.js" />
     <Content Include="Scripts\ngServices\Authentication\authService.js" />
     <Content Include="Scripts\ngServices\authInterceptor.js" />
     <Content Include="Scripts\ngServices\FoodCategoryService\foodCategoryService.js" />
     <Content Include="Scripts\ngServices\FoodItemService\foodItemService.js" />
     <Content Include="Scripts\ngServices\FoodOrderService\foodOrderService.js" />
+    <Content Include="Scripts\ngServices\jwtHelper.js" />
     <Content Include="Scripts\nprogress.js" />
     <Content Include="Scripts\respond.js" />
     <Content Include="Scripts\respond.matchmedia.addListener.js" />
@@ -2101,6 +2105,7 @@
     <Content Include="Views\Table\Index.cshtml" />
     <Content Include="Views\PaymentProcess\Index.cshtml" />
     <Content Include="Views\Account\Login.cshtml" />
+    <Content Include="Views\Account\Register.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

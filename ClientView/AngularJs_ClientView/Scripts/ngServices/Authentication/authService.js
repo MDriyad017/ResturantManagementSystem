@@ -3,6 +3,27 @@
         function ($http, $window, serviceBasePath) {
             var fac = {};
 
+            fac.userRegistration = function (
+                fullname, userName, password, confirmPassword
+            ) {
+                return $http({
+                    method: 'POST',
+                    url: serviceBasePath + '/api/register001',
+                    dataType: 'json',
+                    data: JSON.stringify({
+                        "FullName": fullname,
+                        "UserName": userName,
+                        "Password": password,
+                        "ConfirmPassword": confirmPassword
+                    }),
+                    headers: { "Content-Type": "application/json" }
+                }).then(function (response) {
+                    return response;
+                }, function (error) {
+                    return error;
+                });
+            };
+
             fac.userLogin = function (
                 userName, password
             ) {

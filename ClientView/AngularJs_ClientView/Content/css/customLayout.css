@@ -1,0 +1,37 @@
+﻿/* 1. Base Sidebar Transition */
+.sidebar {
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1) !important;
+}
+
+/* 2. Topbar Modern Look */
+.topbar {
+    background: rgba(255, 255, 255, 0.9) !important;
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid #e3e6f0;
+}
+
+/* 3. MOBILE DRAWER FIX (Crucial Part) */
+@media (max-width: 768px) {
+    #accordionSidebar {
+        position: fixed !important;
+        z-index: 1060;
+        height: 100vh;
+        left: -250px !important; /* Hide off-screen */
+        display: flex !important; /* Ensure it's not display:none */
+        width: 250px !important;
+    }
+
+        /* When 'toggled' class is applied via AngularJS, slide it in */
+        #accordionSidebar.toggled {
+            left: 0 !important;
+            box-shadow: 5px 0 15px rgba(0,0,0,0.2);
+        }
+}
+
+/* 4. Desktop "Shrink" Fix (Optional) */
+@media (min-width: 769px) {
+    .sidebar.toggled {
+        width: 6.5rem !important;
+        overflow: visible;
+    }
+}

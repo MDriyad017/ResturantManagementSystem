@@ -1,5 +1,6 @@
 ﻿using CommonDataModel;
 using DBModel;
+using Newtonsoft.Json.Linq;
 using RMS_WebAPI.JWT;
 using System;
 using System.Collections.Generic;
@@ -17,18 +18,22 @@ namespace RMS_WebAPI.Controllers
         private readonly Resturant_ProjectEntities _context = new Resturant_ProjectEntities();
 
         [HttpPost]
-        [Route("register")]
+        [Route("register001")]
         public IHttpActionResult Register(RegisterModel model)
         {
             if (!ModelState.IsValid)
-                return BadRequest(ModelState);
+            {
+                var error = ModelState.Values.SelectMany(v => v.Errors).FirstOrDefault()?.ErrorMessage;
+                // Status code becomes 200 OK by default, body contains success: false
+                return Ok(new { message = error ?? "Invalid data", success = false });
+            }
 
             if (_context.Users.Any(u => u.UserName == model.UserName))
-                return BadRequest("Username already exists");
+                return Ok(new { message = "Username already exists", success = false });
 
             var userRole = _context.Roles.FirstOrDefault(r => r.RoleName == "User");
             if (userRole == null)
-                return BadRequest("User role not found");
+                return Ok(new { message = "User role not found", success = false });
 
             string passwordHash = BCrypt.Net.BCrypt.HashPassword(model.Password);
 
@@ -44,7 +49,7 @@ namespace RMS_WebAPI.Controllers
             _context.Users.Add(user);
             _context.SaveChanges();
 
-            return Ok("User registered successfully");
+            return Ok(new { message = "User registered successfully", success = true });
         }
 
         [HttpPost]
@@ -52,7 +57,7 @@ namespace RMS_WebAPI.Controllers
         public IHttpActionResult Login(LoginModel model)
         {
             if (!ModelState.IsValid)
-                return BadRequest(ModelState);
+                return Ok(new { message = "Invalid input data", success = false });
 
             var user = (from u in _context.Users
                         join r in _context.Roles on u.RoleId equals r.RoleId
@@ -65,19 +70,19 @@ namespace RMS_WebAPI.Controllers
                         }).FirstOrDefault();
 
             if (user == null)
-                return Unauthorized();
+                return Ok(new { message = "Invalid username or password", success = false });
 
-            // Verify password
             if (!BCrypt.Net.BCrypt.Verify(model.Password, user.PasswordHash))
-                return Unauthorized();
+                return Ok(new { message = "Invalid username or password", success = false });
 
-            // Generate JWT
             var token = JwtManager.GenerateToken(user.UserName, user.RoleName);
 
             return Ok(new
             {
                 token = token,
-                role = user.RoleName
+                role = user.RoleName,
+                success = true,
+                message = "Login successful"
             });
         }
     }

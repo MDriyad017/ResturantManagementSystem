@@ -1,9 +1,124 @@
 ﻿@{
-    ViewBag.Title = "Login";
-    Layout = "~/Views/Shared/_Layout.cshtml";
+    Layout = null;
 }
 
-<div class="container mt-5" ng-controller="loginController">
+<!DOCTYPE html>
+<html lang="en" ng-app="myApp">
+<head>
+    <meta charset="utf-8" />
+    <base href="/">
+    <title>Smart Restaurant - Login</title>
+    <link href="~/Content/bootstrap.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
+
+    <style>
+        body {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            height: 100vh;
+            font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+        }
+
+        .login-card {
+            max-width: 400px;
+            margin-top: 100px;
+            background: rgba(255, 255, 255, 0.95);
+            padding: 40px;
+            border-radius: 15px;
+            box-shadow: 0 15px 35px rgba(0,0,0,0.2);
+        }
+
+        .input-group-text {
+            background: transparent;
+            border-right: none;
+            color: #764ba2;
+        }
+
+        .form-control {
+            border-left: none;
+            height: 45px;
+        }
+
+            .form-control:focus {
+                box-shadow: none;
+                border-color: #ced4da;
+            }
+
+        .btn-login {
+            background: #764ba2;
+            border: none;
+            padding: 12px;
+            font-weight: 600;
+            transition: 0.3s;
+        }
+
+            .btn-login:hover {
+                background: #667eea;
+                transform: translateY(-2px);
+            }
+
+        .error-text {
+            color: #e74c3c;
+            font-size: 0.8rem;
+            margin-top: 2px;
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <div class="container" ng-controller="loginController">
+        <div class="login-card mx-auto animate__animated animate__zoomIn">
+            <div class="text-center mb-4">
+                <div class="mb-2">
+                    <i class="fas fa-utensils fa-3x" style="color: #764ba2;"></i>
+                </div>
+                <h3 class="fw-bold" style="color: #464040;">Welcome Back</h3>
+                <p class="text-muted">Please sign in to your account</p>
+            </div>
+
+            <form name="frmLogin" novalidate ng-submit="login()">
+                <div class="mb-3">
+                    <div class="input-group">
+                        <span class="input-group-text"><i class="fas fa-user"></i></span>
+                        <input type="text" name="username" class="form-control" placeholder="Username"
+                               ng-model="username" required />
+                    </div>
+                    <span class="error-text" ng-show="frmLogin.username.$touched && frmLogin.username.$invalid">Username is required</span>
+                </div>
+
+                <div class="mb-4">
+                    <div class="input-group">
+                        <span class="input-group-text"><i class="fas fa-lock"></i></span>
+                        <input type="password" name="password" class="form-control" placeholder="Password"
+                               ng-model="password" required />
+                    </div>
+                    <span class="error-text" ng-show="frmLogin.password.$touched && frmLogin.password.$invalid">Password is required</span>
+                </div>
+
+                <button type="submit" class="btn btn-danger w-100 btn-login" ng-disabled="frmLogin.$invalid"> <i class="fas fa-sign-in-alt me-2"></i> Sign In </button>
+
+                <div class="text-center mt-4">
+                    <a href="javascript:void(0)" class="text-decoration-none" ng-click="openRegisterPage()">
+                        New here? <span style="color: #764ba2; font-weight: 600;">Create an Account</span>
+                    </a>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <script src="~/Scripts/angular.min.js"></script>
+    <script src="~/Scripts/angular-route.min.js"></script>
+    <script src="~/Scripts/ng-file-upload.min.js"></script>
+    <script src="~/Scripts/myApp.js?reload=@DateTime.Now.Date.ToShortDateString()"></script>
+
+    <script src="~/Scripts/ngServices/authInterceptor.js?reload=@DateTime.Now.Date.ToShortDateString()"></script>
+    <script src="~/Scripts/ngServices/Authentication/authService.js?reload=@DateTime.Now.Date.ToShortDateString()"></script>
+    <script src="~/Scripts/ngControllers/Login/loginController.js?reload=@DateTime.Now.Date.ToShortDateString()"></script>
+    <script src="~/Scripts/sweetAlert.js"></script>
+</body>
+</html>
+
+@*<div class="container mt-5" ng-controller="loginController">
     <div class="card col-md-4 mx-auto">
         <div class="card-header text-center">Login</div>
         <div class="card-body">
@@ -17,5 +132,5 @@
 @section scripts {
     <script src="~/Scripts/ngServices/Authentication/authService.js?reload=@DateTime.Now.Date.ToShortDateString()"></script>
     <script src="~/Scripts/ngControllers/Login/loginController.js?reload=@DateTime.Now.Date.ToShortDateString()"></script>
-}
+}*@
 

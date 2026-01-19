@@ -13,5 +13,10 @@ namespace AngularJs_ClientView.Controllers
         {
             return View();
         }
+
+        public ActionResult Register()
+        {
+            return View();
+        }
     }
 }
