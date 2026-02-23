@@ -1,6 +1,6 @@
-﻿myApp.controller('foodOrderController', ['$scope', 'applicationBasePath', '$timeout', '$window', '$location', 'foodItemService', 'foodItemService', 'foodOrderService', 
+﻿myApp.controller('foodOrderController', ['$scope', 'applicationBasePath', '$timeout', '$window', 'jwtHelper', '$location', 'foodItemService', 'foodOrderService', 
     function (
-        $scope, applicationBasePath, $timeout, $window, $location, foodItemService, foodItemService, foodOrderService
+        $scope, applicationBasePath, $timeout, $window, jwtHelper, $location, foodItemService, foodOrderService
     ) {
         const urlParams = new URLSearchParams(window.location.search);
 
@@ -12,6 +12,30 @@
         $scope.foodPhotoFileName = '';
         $scope.SelectedFiles = [];
         $scope.selectedFoodForOrderJsonList = [];
+        $scope.selectedCat = 'ALL';
+
+        var token = $window.localStorage.getItem('jwtToken');
+        if (token) {
+            try {
+                var payload = jwtHelper.getPayload(token);
+                if (payload) {
+                    $scope.userName = payload.unique_name || payload.name || "User";
+                    $scope.userRole = payload.role;
+                    $scope.userId = payload.UserId;
+                }
+            } catch (e) {
+                console.error("Token decoding failed", e);
+                $scope.logout(); // Clean up if token is corrupt
+            }
+        }
+
+        // Updated calculateTotal for precision
+        $scope.calculateTotal = function () {
+            let total = $scope.selectedFoodForOrderJsonList.reduce((sum, food) => {
+                return sum + (food.FoodPrice * food.Quantity);
+            }, 0);
+            $scope.totalFoodPrice = total.toFixed(2);
+        };
 
         // Add To Food For Order
         $scope.clickToAddFoods = function (item) {
@@ -19,7 +43,7 @@
             if (existingFood) {
                 // Increase quantity by 1 if the item already exists
                 existingFood.Quantity += 1;
-                item.Stock -= 1; // Decrease stock
+                item.Stock -= 1;
             } else if (item.Stock > 0) {
                 // Add new item to the list with default quantity as 1
                 $scope.selectedFoodForOrderJsonList.push({
@@ -28,7 +52,7 @@
                     FoodPrice: item.FoodPrice,
                     Quantity: 1
                 });
-                item.Stock -= 1; // Decrease stock
+                item.Stock -= 1;
                 if ($scope.selectedFoodForOrderJsonList.length > 0) {
                     $scope.confirmOrder = false;
                 }
@@ -41,7 +65,7 @@
             var item = $scope.allFoodsJsonListData.find(x => x.FoodId === food.FoodItemID);
             if (item && item.Stock > 0) {
                 food.Quantity += 1;
-                item.Stock -= 1; // Decrease stock
+                item.Stock -= 1;
             }
             $scope.calculateTotal();
         };
@@ -51,12 +75,12 @@
             var item = $scope.allFoodsJsonListData.find(x => x.FoodId === food.FoodItemID);
             if (food.Quantity > 1) {
                 food.Quantity -= 1;
-                item.Stock += 1; // Increase stock
+                item.Stock += 1;
             } else {
                 // Remove item if quantity becomes 0
                 const index = $scope.selectedFoodForOrderJsonList.indexOf(food);
                 $scope.selectedFoodForOrderJsonList.splice(index, 1);
-                item.Stock += 1; // Increase stock
+                item.Stock += 1;
             }
             $scope.calculateTotal();
             if ($scope.selectedFoodForOrderJsonList.length > 0) {
@@ -68,22 +92,20 @@
         };
 
         // Calculate Total Price
-        $scope.calculateTotal = function () {
-            $scope.totalFoodPrice = $scope.selectedFoodForOrderJsonList.reduce((sum, food) => {
-                return sum + (food.FoodPrice * food.Quantity);
-            }, 0).toFixed(2);
-        };
-
-
-        // Filter Category Wise Food
         $scope.filterFoodsCategoryWise = function (category) {
-            GetAllFoodListData(category)
+            $scope.selectedCat = category; // Highlights the active category
+            GetAllFoodListData(category);
         }
+
+        //// Filter Category Wise Food
+        //$scope.filterFoodsCategoryWise = function (category) {
+        //    GetAllFoodListData(category)
+        //}
 
         // Save Order
         $scope.clickToSaveOrder = function () {
             foodOrderService.SaveFoodOrder(
-                $scope.tableId, $scope.totalFoodPrice, $scope.selectedFoodForOrderJsonList
+                $scope.userId, $scope.tableId, $scope.totalFoodPrice, $scope.selectedFoodForOrderJsonList
             ).then(function (value) {
                 if (value.data.IsSuccess === true) {
                     Swal.fire({
@@ -120,17 +142,68 @@
             });
         };
 
+        var GetCategoryListForDropdown = function () {
+            foodItemService.FetchCategoryDropDown(
+            ).then(function (value) {
+                $scope.foodCategoryListDropDownJsonData = value.data.filter(x => x.Value != '');
+
+                // Add "All Dishes" to the beginning of the array
+                $scope.foodCategoryListDropDownJsonData.unshift({
+                    Item: "All Dishes",
+                    Value: "ALL",
+                    IsSelected: false
+                });
+
+                $.each(value.data, function () {
+                    if (this.IsSelected) {
+                        $scope.categoryId = this.Value;
+                    }
+                });
+
+                console.log($scope.foodCategoryListDropDownJsonData);
+            }, function (reason) {
+                console.log(reason);
+            });
+        };
+
         var GetAllFoodListData = function (category) {
-            var q = category === undefined ? '' : category
+            var q = category === undefined || category == 'ALL' ? 0 : category;
             foodItemService.FetchFoodList(
                 q
             ).then(function (value) {
+                // Store the server response
                 $scope.allFoodsJsonListData = value.data;
+
+                // If cart has items, adjust stock counts
+                if ($scope.selectedFoodForOrderJsonList && $scope.selectedFoodForOrderJsonList.length > 0) {
+                    // Create a map of cart quantities
+                    const cartQuantities = {};
+                    $scope.selectedFoodForOrderJsonList.forEach(item => {
+                        cartQuantities[item.FoodItemID] = item.Quantity;
+                    });
+
+                    // Update stock in the displayed data
+                    $scope.allFoodsJsonListData.forEach(food => {
+                        const cartQty = cartQuantities[food.FoodId];
+                        if (cartQty) {
+                            // Subtract cart quantity from available stock
+                            const availableStock = food.Stock - cartQty;
+                            food.Stock = Math.max(0, availableStock);
+
+                            // Update availability
+                            if (food.Stock === 0) {
+                                food.Available = false;
+                            }
+                        }
+                    });
+                }
+
             }, function (reason) {
                 console.log(reason);
             });
         };
 
         GetAllFoodListData();
+        GetCategoryListForDropdown();
     }
 ]);

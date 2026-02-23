@@ -3,7 +3,7 @@
         var fac = {};
 
         fac.SaveFoodOrder = function (
-            tableId, totalFoodPrice, selectedFoodForOrderJsonList
+            userId, tableId, totalFoodPrice, selectedFoodForOrderJsonList
         ) {
             return $http({
                 method: 'POST',
@@ -12,7 +12,8 @@
                 data: JSON.stringify({
                     "TotalFoodPrice": totalFoodPrice,
                     "FoodDetailsList": selectedFoodForOrderJsonList,
-                    "TableID": tableId
+                    "TableID": tableId,
+                    "UserId": userId
                 }),
                 headers: { "Content-Type": "application/json" }
             }).then(function (response) {

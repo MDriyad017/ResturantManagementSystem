@@ -18,7 +18,7 @@
                 return $http({
                     method: 'GET',
                     url: serviceBasePath + '/api/G020125'
-                        + '?category=' + q
+                        + '?categoryId=' + q
                 }).then(function (response) {
                     return response;
                 }, function (error) {
@@ -125,6 +125,20 @@
                         + '?query=' + q
                         + '&pageIndex=' + pageIndex
                         + '&pageSize=' + pageSize
+                }).then(function (response) {
+                    return response;
+                }, function (error) {
+                    return error;
+                });
+            };
+
+            fac.FetchOrderDetailList = function (
+                orderId
+            ) {
+                return $http({
+                    method: 'GET',
+                    url: serviceBasePath + '/api/G220226'
+                        + '?orderId=' + orderId
                 }).then(function (response) {
                     return response;
                 }, function (error) {

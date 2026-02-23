@@ -6,6 +6,8 @@
         $scope.showGridPayment = false;
         $scope.pageIndexPayment = 1;
         $scope.showRecordsInfoPayment = '';
+        $scope.selectedOrderId = null;
+        $scope.selectedOrder = null;
 
         $scope.previousPayment = function (e) {
             e.preventDefault();
@@ -60,6 +62,38 @@
             });
         };
 
+        $scope.clickToDetails = function (orderId) {
+            // Find the selected order from the list
+            $scope.selectedOrder = $scope.allOrderJsonListData.Data.find(function (order) {
+                return order.OrderId === orderId;
+            });
+
+            $scope.selectedOrderId = orderId;
+
+            foodItemService.FetchOrderDetailList(orderId).then(function (value) {
+                $scope.orderDetailsJsonListData = value.data;
+
+                // Show the modal after data is loaded
+                $('#orderDetailsModal').modal('show');
+
+                console.log($scope.orderDetailsJsonListData);
+            }, function (reason) {
+                console.log(reason);
+                // Show error message
+                toastr.error('Failed to load order details');
+            });
+        };
+
+        $scope.getOrderTotal = function () {
+            if (!$scope.orderDetailsJsonListData) return 0;
+
+            var total = 0;
+            angular.forEach($scope.orderDetailsJsonListData, function (item) {
+                total += item.Quantity * item.FoodPrice
+            });
+            return total;
+        };
+
         var GetAllOrderListData = function () {
             var q = $scope.tableName === undefined ? '' : $scope.tableName;
 
@@ -67,7 +101,7 @@
                 q, $scope.pageIndexPayment, dataTableRows
             ).then(function (value) {
                 $scope.allOrderJsonListData = value.data;
-
+                console.log($scope.allOrderJsonListData);
                 lastPageNoPayment = value.data.LastPageNo;
                 if (value.data.TotalNumberOfRecords > 0) {
                     $scope.showGridPayment = true;

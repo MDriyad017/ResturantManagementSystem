@@ -21,7 +21,7 @@
                 $scope.logout(); // Clean up if token is corrupt
             }
         }
-
+        
         $scope.logout = function () {
             $window.localStorage.removeItem('jwtToken');
             window.location.href = applicationBasePath + "/Account/Login";

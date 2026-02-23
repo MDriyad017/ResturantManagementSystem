@@ -16,7 +16,7 @@
     <base href="/" />
     <!-- Custom styles for this template -->
     <link href="~/Theme/css/sb-admin-2.min.css" rel="stylesheet">
-
+    <link href="~/Content/css/nprogress.css" rel="stylesheet" />
 </head>
 <body id="page-top" ng-app="myApp" ng-cloak ng-controller="layoutController">
 
@@ -79,13 +79,13 @@
                 <a class="nav-link collapsed" href="~/Home/Index" target="_self">
                     <i class="fas fa-table"></i>
                     <span>Tables</span>
-                </a>
+                </a>{{token}}
             </li>
             <li class="nav-item" ng-if="userRole === 'Admin'">
                 <a class="nav-link collapsed" href="~/PaymentProcess/Index" target="_self">
                     <i class="fas fa-handshake"></i>
                     <span>Payment</span>
-                </a>
+                </a>{{token}}
             </li>
 
             @*<li class="nav-item">
@@ -172,7 +172,7 @@
         <!-- End of Sidebar -->
         <!--============= Side Bar End =============-->
         <!-- Content Wrapper -->
-        <div id="content-wrapper" class="d-flex flex-column">
+        <div id="content-wrapper" class="d-flex flex-column" style="height: 95vh;">
 
             <!-- Main Content -->
             <div id="content">
@@ -285,8 +285,7 @@
                                 <span class="badge badge-danger badge-counter">7</span>
                             </a>
                             <!-- Dropdown - Messages -->
-                            <div class="dropdown-list dropdown-menu dropdown-menu-right shadow animated--grow-in"
-                                 aria-labelledby="messagesDropdown">
+                            <div class="dropdown-list dropdown-menu dropdown-menu-right shadow animated--grow-in" aria-labelledby="messagesDropdown">
                                 <h6 class="dropdown-header">
                                     Message Center
                                 </h6>
@@ -402,7 +401,6 @@
                     <div class="row">
                         <div class="container body-content">
                             @RenderBody()
-                            <hr />
                         </div>
                     </div>
                     <!-- Content Row -->
@@ -413,10 +411,10 @@
             </div>
             <!-- End of Main Content -->
             <!-- Footer -->
-            <footer class="sticky-footer bg-white">
+            <footer class="sticky-footer bg-white" style="padding: 1rem 0 !important;">
                 <div class="container my-auto">
                     <div class="copyright text-center my-auto">
-                        <span>Copyright &copy; Your Website 2021</span>
+                        <span>Copyright &copy; Smart RMS 2026</span>
                     </div>
                 </div>
             </footer>

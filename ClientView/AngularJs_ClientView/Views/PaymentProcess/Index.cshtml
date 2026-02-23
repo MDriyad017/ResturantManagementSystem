@@ -26,35 +26,38 @@
             <table class="table table-bordered table-striped table-sm table-responsive-sm">
                 <thead style="color: #525463;">
                     <tr>
-                        <th>Table No</th>
-                        <th>Foods</th>
-                        <th>Total Price</th>
-                        <th style="width: 40px">Payment</th>
+                        <th>Order Date</th>
+                        <th>Table</th>
+                        <th>Customer</th>
+                        <th style="text-align:right">Total Price</th>
+                        <th style="width: 40px;"></th>
                         <th style="width: 40px"></th>
                     </tr>
                 </thead>
                 <tbody>
                     <tr ng-repeat="order in allOrderJsonListData.Data" ng-class="{'text-green': order.IsPayementDone}">
+                        <td>{{order.OrderDate | date:'dd MMM yyyy'}}</td>
                         <td>{{order.Table}}</td>
-                        <td>{{order.Foods}}</td>
-                        <td>{{order.TotalPrice}}</td>
+                        <td>{{order.FullName}}</td>
+                        <td style="text-align:right">{{order.TotalPrice}}</td>
                         <td>
                             <div class="d-flex justify-content-center">
                                 <!-- Show "Payment" button if IsPayementDone is false -->
-                                <button ng-if="!order.IsPayementDone" type="button" ng-click="clickToPayment(order.OrderId, order.TableID)" class="btn btn-primary btn-sm" style="display: flex;justify-content: center;align-items: center;">
+                                <button ng-if="!order.IsPayementDone" type="button" ng-click="clickToPayment(order.OrderId, order.TableID)" class="btn btn-outline-primary btn-sm" style="display: flex;justify-content: center;align-items: center; margin-right:5px;" title="Payment">
                                     <i class="fas fa-handshake"></i>
-                                    &nbsp; <span>Payment</span>
                                 </button>
-                                
+
                                 <!-- Show "Done" button if IsPayementDone is true -->
-                                <button ng-if="order.IsPayementDone" type="button" class="btn btn-success btn-sm" style="display: flex;justify-content: center;align-items: center;" ng-class="{'disabled-div': order.IsPayementDone === true}" disabled>
+                                <button ng-if="order.IsPayementDone" type="button" class="btn btn-success btn-sm" style="display: flex; justify-content: center; align-items: center; margin-right: 5px; padding: 0px 5px 0px 5px;" ng-class="{'disabled-div': order.IsPayementDone === true}" disabled>
                                     <i class="fas fa-check-circle"></i>
                                     &nbsp; <span>Done</span>
+                                </button>
+                                <button type="button" ng-click="clickToDetails(order.OrderId)" class="btn btn-outline-info btn-sm" style="display: flex; justify-content: center; align-items: center; margin-right: 5px;" title="Order Details">
+                                    <i class="fas fa-list"></i>
                                 </button>
                             </div>
                         </td>
                         <td>
-
                         </td>
                     </tr>
                 </tbody>
@@ -77,6 +80,69 @@
                 </div>
             </div>
         </div>
+        <!-- Order Details Modal -->
+        <div class="modal fade" id="orderDetailsModal" tabindex="-1" role="dialog" aria-labelledby="orderDetailsModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-lg" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="orderDetailsModalLabel">
+                            <strong>Order Details - #{{selectedOrder.Table}}</strong>
+                        </h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <!-- Order Summary -->
+                        <div class="row mb-3" ng-if="selectedOrder">
+                            <div class="col-md-4">
+                                <strong>Order Date:</strong> {{selectedOrder.OrderDate | date:'dd MMM yyyy HH:mm'}}
+                            </div>
+                            <div class="col-md-4">
+                                <strong>Customer:</strong> {{selectedOrder.FullName}}
+                            </div>
+                        </div>
+
+                        <!-- Order Items Table -->
+                        <div class="table-responsive">
+                            <table class="table table-bordered table-striped table-sm">
+                                <thead style="color: #525463; background-color: #f8f9fc;">
+                                    <tr>
+                                        <th>#</th>
+                                        <th>Item Name</th>
+                                        <th style="text-align: right;">Quantity</th>
+                                        <th style="text-align: right;">Unit Price</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr ng-repeat="item in orderDetailsJsonListData track by $index">
+                                        <td>{{$index + 1}}</td>
+                                        <td>{{item.FoodName}}</td>
+                                        <td style="text-align: right;">{{item.Quantity}}</td>
+                                        <td style="text-align: right;">{{item.FoodPrice}}</td>
+                                    </tr>
+                                </tbody>
+                                <tfoot ng-if="orderDetailsJsonListData.length > 0">
+                                    <tr>
+                                        <th colspan="3" style="text-align: right;">Sub Total:</th>
+                                        <th style="text-align: right;">{{getOrderTotal()}}</th>
+                                    </tr>
+                                </tfoot>
+                            </table>
+
+                            <!-- No items message -->
+                            <div ng-if="!orderDetailsJsonListData || orderDetailsJsonListData.length === 0" class="alert alert-info text-center">
+                                No items found for this order.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Modal End -->
     </div>
 </div>
 

@@ -5,28 +5,30 @@
         ) {
 
             $scope.login = function () {
-                authService.userLogin($scope.username, $scope.password)
-                    .then(function (res) {
-                        if (res.data.success === true) {
-                            authService.saveToken(res.data.token);
+                authService.userLogin(
+                    $scope.username, $scope.password
+                )
+                .then(function (res) {
+                    if (res.data.success === true) {
+                        authService.saveToken(res.data.token);
 
-                            Swal.fire({
-                                title: 'Success!',
-                                text: 'Welcome back, ' + $scope.username,
-                                icon: 'success',
-                                timer: 1500,
-                                showConfirmButton: false
-                            }).then(() => {
-                                window.location.replace("/Home/Index");
-                            });
-                        } else {
-                            $scope.showLoginError(res.data.message || 'Login Failed');
-                        }
-                    })
-                    .catch(function (error) {
-                        var errorMsg = (error.data && error.data.message) ? error.data.message : 'Invalid Username or Password';
-                        $scope.showLoginError(errorMsg);
-                    });
+                        Swal.fire({
+                            title: 'Success!',
+                            text: 'Welcome back, ' + $scope.username,
+                            icon: 'success',
+                            timer: 1500,
+                            showConfirmButton: false
+                        }).then(() => {
+                            window.location.replace("/Home/Index");
+                        });
+                    } else {
+                        $scope.showLoginError(res.data.message || 'Login Failed');
+                    }
+                })
+                .catch(function (error) {
+                    var errorMsg = (error.data && error.data.message) ? error.data.message : 'Invalid Username or Password';
+                    $scope.showLoginError(errorMsg);
+                });
             };
 
             $scope.showLoginError = function (msg) {
