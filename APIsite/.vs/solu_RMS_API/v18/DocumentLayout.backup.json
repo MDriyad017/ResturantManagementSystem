@@ -1,0 +1,542 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "E:\\Development\\ResturantManagementSystem\\APIsite\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{59643907-8B36-4DA9-A386-DEBFCD345C9A}|BussinessLogicLayer\\BussinessLogicLayer.csproj|e:\\development\\resturantmanagementsystem\\apisite\\bussinesslogiclayer\\select\\bselectfoodallfororder.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{59643907-8B36-4DA9-A386-DEBFCD345C9A}|BussinessLogicLayer\\BussinessLogicLayer.csproj|solutionrelative:bussinesslogiclayer\\select\\bselectfoodallfororder.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1C0C0331-84D2-4450-B357-063C4DAAC0E3}|RMS_WebAPI\\RMS_WebAPI.csproj|E:\\Development\\ResturantManagementSystem\\APIsite\\rms_webapi\\controllers\\selectcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1C0C0331-84D2-4450-B357-063C4DAAC0E3}|RMS_WebAPI\\RMS_WebAPI.csproj|solutionrelative:rms_webapi\\controllers\\selectcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{59643907-8B36-4DA9-A386-DEBFCD345C9A}|BussinessLogicLayer\\BussinessLogicLayer.csproj|E:\\Development\\ResturantManagementSystem\\APIsite\\bussinesslogiclayer\\select\\bselectfoodorders.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{59643907-8B36-4DA9-A386-DEBFCD345C9A}|BussinessLogicLayer\\BussinessLogicLayer.csproj|solutionrelative:bussinesslogiclayer\\select\\bselectfoodorders.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7A1E2146-6CED-40AB-BC6D-708F4B2F0007}|DataAccessLayer\\DataAccessLayer.csproj|e:\\development\\resturantmanagementsystem\\apisite\\dataaccesslayer\\dataaccess\\update\\dupdatefoodcategory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7A1E2146-6CED-40AB-BC6D-708F4B2F0007}|DataAccessLayer\\DataAccessLayer.csproj|solutionrelative:dataaccesslayer\\dataaccess\\update\\dupdatefoodcategory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7A1E2146-6CED-40AB-BC6D-708F4B2F0007}|DataAccessLayer\\DataAccessLayer.csproj|E:\\Development\\ResturantManagementSystem\\APIsite\\dataaccesslayer\\dataaccess\\select\\dselectfoodorderdetails.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7A1E2146-6CED-40AB-BC6D-708F4B2F0007}|DataAccessLayer\\DataAccessLayer.csproj|solutionrelative:dataaccesslayer\\dataaccess\\select\\dselectfoodorderdetails.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7A1E2146-6CED-40AB-BC6D-708F4B2F0007}|DataAccessLayer\\DataAccessLayer.csproj|E:\\Development\\ResturantManagementSystem\\APIsite\\dataaccesslayer\\dataaccess\\select\\dselectfoodorders.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7A1E2146-6CED-40AB-BC6D-708F4B2F0007}|DataAccessLayer\\DataAccessLayer.csproj|solutionrelative:dataaccesslayer\\dataaccess\\select\\dselectfoodorders.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{59643907-8B36-4DA9-A386-DEBFCD345C9A}|BussinessLogicLayer\\BussinessLogicLayer.csproj|E:\\Development\\ResturantManagementSystem\\APIsite\\bussinesslogiclayer\\insert\\binsertorder.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{59643907-8B36-4DA9-A386-DEBFCD345C9A}|BussinessLogicLayer\\BussinessLogicLayer.csproj|solutionrelative:bussinesslogiclayer\\insert\\binsertorder.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7A1E2146-6CED-40AB-BC6D-708F4B2F0007}|DataAccessLayer\\DataAccessLayer.csproj|E:\\Development\\ResturantManagementSystem\\APIsite\\dataaccesslayer\\dataaccess\\insert\\dinsertfoodorder.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7A1E2146-6CED-40AB-BC6D-708F4B2F0007}|DataAccessLayer\\DataAccessLayer.csproj|solutionrelative:dataaccesslayer\\dataaccess\\insert\\dinsertfoodorder.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1C0C0331-84D2-4450-B357-063C4DAAC0E3}|RMS_WebAPI\\RMS_WebAPI.csproj|E:\\Development\\ResturantManagementSystem\\APIsite\\rms_webapi\\controllers\\insertcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1C0C0331-84D2-4450-B357-063C4DAAC0E3}|RMS_WebAPI\\RMS_WebAPI.csproj|solutionrelative:rms_webapi\\controllers\\insertcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0536421D-3B67-4665-92CF-8958A46E480D}|CommonDataModel\\CommonDataModel.csproj|E:\\Development\\ResturantManagementSystem\\APIsite\\commondatamodel\\commonfoodorder.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0536421D-3B67-4665-92CF-8958A46E480D}|CommonDataModel\\CommonDataModel.csproj|solutionrelative:commondatamodel\\commonfoodorder.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1C0C0331-84D2-4450-B357-063C4DAAC0E3}|RMS_WebAPI\\RMS_WebAPI.csproj|E:\\Development\\ResturantManagementSystem\\APIsite\\rms_webapi\\controllers\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1C0C0331-84D2-4450-B357-063C4DAAC0E3}|RMS_WebAPI\\RMS_WebAPI.csproj|solutionrelative:rms_webapi\\controllers\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1C0C0331-84D2-4450-B357-063C4DAAC0E3}|RMS_WebAPI\\RMS_WebAPI.csproj|E:\\Development\\ResturantManagementSystem\\APIsite\\rms_webapi\\jwt\\jwtmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1C0C0331-84D2-4450-B357-063C4DAAC0E3}|RMS_WebAPI\\RMS_WebAPI.csproj|solutionrelative:rms_webapi\\jwt\\jwtmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1C0C0331-84D2-4450-B357-063C4DAAC0E3}|RMS_WebAPI\\RMS_WebAPI.csproj|E:\\Development\\ResturantManagementSystem\\APIsite\\rms_webapi\\web.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{1C0C0331-84D2-4450-B357-063C4DAAC0E3}|RMS_WebAPI\\RMS_WebAPI.csproj|solutionrelative:rms_webapi\\web.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{ECF26DB5-9EFF-4C9A-B5D2-42A4B5D3AC48}|DBModel\\DBModel.csproj|E:\\Development\\ResturantManagementSystem\\APIsite\\dbmodel\\app.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{ECF26DB5-9EFF-4C9A-B5D2-42A4B5D3AC48}|DBModel\\DBModel.csproj|solutionrelative:dbmodel\\app.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7A1E2146-6CED-40AB-BC6D-708F4B2F0007}|DataAccessLayer\\DataAccessLayer.csproj|E:\\Development\\ResturantManagementSystem\\APIsite\\dataaccesslayer\\dataaccess\\update\\dupdatetable.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7A1E2146-6CED-40AB-BC6D-708F4B2F0007}|DataAccessLayer\\DataAccessLayer.csproj|solutionrelative:dataaccesslayer\\dataaccess\\update\\dupdatetable.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7A1E2146-6CED-40AB-BC6D-708F4B2F0007}|DataAccessLayer\\DataAccessLayer.csproj|E:\\Development\\ResturantManagementSystem\\APIsite\\dataaccesslayer\\dataaccess\\update\\dupdatefoodorder.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7A1E2146-6CED-40AB-BC6D-708F4B2F0007}|DataAccessLayer\\DataAccessLayer.csproj|solutionrelative:dataaccesslayer\\dataaccess\\update\\dupdatefoodorder.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7A1E2146-6CED-40AB-BC6D-708F4B2F0007}|DataAccessLayer\\DataAccessLayer.csproj|E:\\Development\\ResturantManagementSystem\\APIsite\\dataaccesslayer\\dataaccess\\update\\dupdatefooditem.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7A1E2146-6CED-40AB-BC6D-708F4B2F0007}|DataAccessLayer\\DataAccessLayer.csproj|solutionrelative:dataaccesslayer\\dataaccess\\update\\dupdatefooditem.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7A1E2146-6CED-40AB-BC6D-708F4B2F0007}|DataAccessLayer\\DataAccessLayer.csproj|E:\\Development\\ResturantManagementSystem\\APIsite\\dataaccesslayer\\dataaccess\\select\\dselecttables.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7A1E2146-6CED-40AB-BC6D-708F4B2F0007}|DataAccessLayer\\DataAccessLayer.csproj|solutionrelative:dataaccesslayer\\dataaccess\\select\\dselecttables.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7A1E2146-6CED-40AB-BC6D-708F4B2F0007}|DataAccessLayer\\DataAccessLayer.csproj|E:\\Development\\ResturantManagementSystem\\APIsite\\dataaccesslayer\\dataaccess\\select\\dselectfooditem.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7A1E2146-6CED-40AB-BC6D-708F4B2F0007}|DataAccessLayer\\DataAccessLayer.csproj|solutionrelative:dataaccesslayer\\dataaccess\\select\\dselectfooditem.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7A1E2146-6CED-40AB-BC6D-708F4B2F0007}|DataAccessLayer\\DataAccessLayer.csproj|E:\\Development\\ResturantManagementSystem\\APIsite\\dataaccesslayer\\dataaccess\\select\\dselectfoodcategory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7A1E2146-6CED-40AB-BC6D-708F4B2F0007}|DataAccessLayer\\DataAccessLayer.csproj|solutionrelative:dataaccesslayer\\dataaccess\\select\\dselectfoodcategory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7A1E2146-6CED-40AB-BC6D-708F4B2F0007}|DataAccessLayer\\DataAccessLayer.csproj|E:\\Development\\ResturantManagementSystem\\APIsite\\dataaccesslayer\\dataaccess\\insert\\dinsertfoodorderdetails.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7A1E2146-6CED-40AB-BC6D-708F4B2F0007}|DataAccessLayer\\DataAccessLayer.csproj|solutionrelative:dataaccesslayer\\dataaccess\\insert\\dinsertfoodorderdetails.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7A1E2146-6CED-40AB-BC6D-708F4B2F0007}|DataAccessLayer\\DataAccessLayer.csproj|E:\\Development\\ResturantManagementSystem\\APIsite\\dataaccesslayer\\dataaccess\\delete\\ddeletefooditem.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7A1E2146-6CED-40AB-BC6D-708F4B2F0007}|DataAccessLayer\\DataAccessLayer.csproj|solutionrelative:dataaccesslayer\\dataaccess\\delete\\ddeletefooditem.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7A1E2146-6CED-40AB-BC6D-708F4B2F0007}|DataAccessLayer\\DataAccessLayer.csproj|E:\\Development\\ResturantManagementSystem\\APIsite\\dataaccesslayer\\dataaccess\\insert\\dinsertfooditem.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7A1E2146-6CED-40AB-BC6D-708F4B2F0007}|DataAccessLayer\\DataAccessLayer.csproj|solutionrelative:dataaccesslayer\\dataaccess\\insert\\dinsertfooditem.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7A1E2146-6CED-40AB-BC6D-708F4B2F0007}|DataAccessLayer\\DataAccessLayer.csproj|E:\\Development\\ResturantManagementSystem\\APIsite\\dataaccesslayer\\dataaccess\\insert\\dinsertfoodcategory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7A1E2146-6CED-40AB-BC6D-708F4B2F0007}|DataAccessLayer\\DataAccessLayer.csproj|solutionrelative:dataaccesslayer\\dataaccess\\insert\\dinsertfoodcategory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1C0C0331-84D2-4450-B357-063C4DAAC0E3}|RMS_WebAPI\\RMS_WebAPI.csproj|E:\\Development\\ResturantManagementSystem\\APIsite\\rms_webapi\\controllers\\deletecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1C0C0331-84D2-4450-B357-063C4DAAC0E3}|RMS_WebAPI\\RMS_WebAPI.csproj|solutionrelative:rms_webapi\\controllers\\deletecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{ECF26DB5-9EFF-4C9A-B5D2-42A4B5D3AC48}|DBModel\\DBModel.csproj|E:\\Development\\ResturantManagementSystem\\APIsite\\dbmodel\\model1.edmx||{C99AEA30-8E36-4515-B76F-496F5A48A6AA}|",
+      "RelativeMoniker": "D:0:0:{ECF26DB5-9EFF-4C9A-B5D2-42A4B5D3AC48}|DBModel\\DBModel.csproj|solutionrelative:dbmodel\\model1.edmx||{C99AEA30-8E36-4515-B76F-496F5A48A6AA}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0536421D-3B67-4665-92CF-8958A46E480D}|CommonDataModel\\CommonDataModel.csproj|E:\\Development\\ResturantManagementSystem\\APIsite\\commondatamodel\\commonuser.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0536421D-3B67-4665-92CF-8958A46E480D}|CommonDataModel\\CommonDataModel.csproj|solutionrelative:commondatamodel\\commonuser.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1C0C0331-84D2-4450-B357-063C4DAAC0E3}|RMS_WebAPI\\RMS_WebAPI.csproj|E:\\Development\\ResturantManagementSystem\\APIsite\\rms_webapi\\controllers\\updatecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1C0C0331-84D2-4450-B357-063C4DAAC0E3}|RMS_WebAPI\\RMS_WebAPI.csproj|solutionrelative:rms_webapi\\controllers\\updatecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1C0C0331-84D2-4450-B357-063C4DAAC0E3}|RMS_WebAPI\\RMS_WebAPI.csproj|E:\\Development\\ResturantManagementSystem\\APIsite\\rms_webapi\\controllers\\commoncontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1C0C0331-84D2-4450-B357-063C4DAAC0E3}|RMS_WebAPI\\RMS_WebAPI.csproj|solutionrelative:rms_webapi\\controllers\\commoncontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0536421D-3B67-4665-92CF-8958A46E480D}|CommonDataModel\\CommonDataModel.csproj|E:\\Development\\ResturantManagementSystem\\APIsite\\commondatamodel\\loginmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0536421D-3B67-4665-92CF-8958A46E480D}|CommonDataModel\\CommonDataModel.csproj|solutionrelative:commondatamodel\\loginmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0536421D-3B67-4665-92CF-8958A46E480D}|CommonDataModel\\CommonDataModel.csproj|E:\\Development\\ResturantManagementSystem\\APIsite\\commondatamodel\\registermodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0536421D-3B67-4665-92CF-8958A46E480D}|CommonDataModel\\CommonDataModel.csproj|solutionrelative:commondatamodel\\registermodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1C0C0331-84D2-4450-B357-063C4DAAC0E3}|RMS_WebAPI\\RMS_WebAPI.csproj|E:\\Development\\ResturantManagementSystem\\APIsite\\rms_webapi\\startup.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1C0C0331-84D2-4450-B357-063C4DAAC0E3}|RMS_WebAPI\\RMS_WebAPI.csproj|solutionrelative:rms_webapi\\startup.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 3,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "SelectController.cs",
+              "DocumentMoniker": "E:\\Development\\ResturantManagementSystem\\APIsite\\RMS_WebAPI\\Controllers\\SelectController.cs",
+              "RelativeDocumentMoniker": "RMS_WebAPI\\Controllers\\SelectController.cs",
+              "ToolTip": "E:\\Development\\ResturantManagementSystem\\APIsite\\RMS_WebAPI\\Controllers\\SelectController.cs",
+              "RelativeToolTip": "RMS_WebAPI\\Controllers\\SelectController.cs",
+              "ViewState": "AgIAAB0AAAAAAAAAAAAhwDMAAAAIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-20T07:42:44.667Z",
+              "IsPinned": true,
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "InsertController.cs",
+              "DocumentMoniker": "E:\\Development\\ResturantManagementSystem\\APIsite\\RMS_WebAPI\\Controllers\\InsertController.cs",
+              "RelativeDocumentMoniker": "RMS_WebAPI\\Controllers\\InsertController.cs",
+              "ToolTip": "E:\\Development\\ResturantManagementSystem\\APIsite\\RMS_WebAPI\\Controllers\\InsertController.cs",
+              "RelativeToolTip": "RMS_WebAPI\\Controllers\\InsertController.cs",
+              "ViewState": "AgIAABkAAAAAAAAAAAAgwDsAAAAgAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-17T05:41:04.258Z",
+              "IsPinned": true
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "AuthController.cs",
+              "DocumentMoniker": "E:\\Development\\ResturantManagementSystem\\APIsite\\RMS_WebAPI\\Controllers\\AuthController.cs",
+              "RelativeDocumentMoniker": "RMS_WebAPI\\Controllers\\AuthController.cs",
+              "ToolTip": "E:\\Development\\ResturantManagementSystem\\APIsite\\RMS_WebAPI\\Controllers\\AuthController.cs",
+              "RelativeToolTip": "RMS_WebAPI\\Controllers\\AuthController.cs",
+              "ViewState": "AgIAADQAAAAAAAAAAAApwFAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-17T17:18:08.014Z",
+              "IsPinned": true
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "BSelectFoodAllForOrder.cs",
+              "DocumentMoniker": "E:\\Development\\ResturantManagementSystem\\APIsite\\BussinessLogicLayer\\Select\\BSelectFoodAllForOrder.cs",
+              "RelativeDocumentMoniker": "BussinessLogicLayer\\Select\\BSelectFoodAllForOrder.cs",
+              "ToolTip": "E:\\Development\\ResturantManagementSystem\\APIsite\\BussinessLogicLayer\\Select\\BSelectFoodAllForOrder.cs",
+              "RelativeToolTip": "BussinessLogicLayer\\Select\\BSelectFoodAllForOrder.cs",
+              "ViewState": "AgIAAAEAAAAAAAAAAAAqwB4AAAAWAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-22T19:40:33.241Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "BSelectFoodOrders.cs",
+              "DocumentMoniker": "E:\\Development\\ResturantManagementSystem\\APIsite\\BussinessLogicLayer\\Select\\BSelectFoodOrders.cs",
+              "RelativeDocumentMoniker": "BussinessLogicLayer\\Select\\BSelectFoodOrders.cs",
+              "ToolTip": "E:\\Development\\ResturantManagementSystem\\APIsite\\BussinessLogicLayer\\Select\\BSelectFoodOrders.cs",
+              "RelativeToolTip": "BussinessLogicLayer\\Select\\BSelectFoodOrders.cs",
+              "ViewState": "AgIAADEAAAAAAAAAAAAgwDgAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-21T08:27:47.9Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "DUpdateFoodCategory.cs",
+              "DocumentMoniker": "E:\\Development\\ResturantManagementSystem\\APIsite\\DataAccessLayer\\DataAccess\\Update\\DUpdateFoodCategory.cs",
+              "RelativeDocumentMoniker": "DataAccessLayer\\DataAccess\\Update\\DUpdateFoodCategory.cs",
+              "ToolTip": "E:\\Development\\ResturantManagementSystem\\APIsite\\DataAccessLayer\\DataAccess\\Update\\DUpdateFoodCategory.cs",
+              "RelativeToolTip": "DataAccessLayer\\DataAccess\\Update\\DUpdateFoodCategory.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABoAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-21T10:40:44.783Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "DInsertFoodOrder.cs",
+              "DocumentMoniker": "E:\\Development\\ResturantManagementSystem\\APIsite\\DataAccessLayer\\DataAccess\\Insert\\DInsertFoodOrder.cs",
+              "RelativeDocumentMoniker": "DataAccessLayer\\DataAccess\\Insert\\DInsertFoodOrder.cs",
+              "ToolTip": "E:\\Development\\ResturantManagementSystem\\APIsite\\DataAccessLayer\\DataAccess\\Insert\\DInsertFoodOrder.cs",
+              "RelativeToolTip": "DataAccessLayer\\DataAccess\\Insert\\DInsertFoodOrder.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAqwB4AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-19T19:16:57.95Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "DUpdateFoodOrder.cs",
+              "DocumentMoniker": "E:\\Development\\ResturantManagementSystem\\APIsite\\DataAccessLayer\\DataAccess\\Update\\DUpdateFoodOrder.cs",
+              "RelativeDocumentMoniker": "DataAccessLayer\\DataAccess\\Update\\DUpdateFoodOrder.cs",
+              "ToolTip": "E:\\Development\\ResturantManagementSystem\\APIsite\\DataAccessLayer\\DataAccess\\Update\\DUpdateFoodOrder.cs",
+              "RelativeToolTip": "DataAccessLayer\\DataAccess\\Update\\DUpdateFoodOrder.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAAiAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-21T10:41:09.335Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "DSelectFoodOrderDetails.cs",
+              "DocumentMoniker": "E:\\Development\\ResturantManagementSystem\\APIsite\\DataAccessLayer\\DataAccess\\Select\\DSelectFoodOrderDetails.cs",
+              "RelativeDocumentMoniker": "DataAccessLayer\\DataAccess\\Select\\DSelectFoodOrderDetails.cs",
+              "ToolTip": "E:\\Development\\ResturantManagementSystem\\APIsite\\DataAccessLayer\\DataAccess\\Select\\DSelectFoodOrderDetails.cs",
+              "RelativeToolTip": "DataAccessLayer\\DataAccess\\Select\\DSelectFoodOrderDetails.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAAIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-21T10:40:17.642Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "BInsertOrder.cs",
+              "DocumentMoniker": "E:\\Development\\ResturantManagementSystem\\APIsite\\BussinessLogicLayer\\Insert\\BInsertOrder.cs",
+              "RelativeDocumentMoniker": "BussinessLogicLayer\\Insert\\BInsertOrder.cs",
+              "ToolTip": "E:\\Development\\ResturantManagementSystem\\APIsite\\BussinessLogicLayer\\Insert\\BInsertOrder.cs",
+              "RelativeToolTip": "BussinessLogicLayer\\Insert\\BInsertOrder.cs",
+              "ViewState": "AgIAAAgAAAAAAAAAAAAmwA0AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-21T16:43:58.937Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "JwtManager.cs",
+              "DocumentMoniker": "E:\\Development\\ResturantManagementSystem\\APIsite\\RMS_WebAPI\\JWT\\JwtManager.cs",
+              "RelativeDocumentMoniker": "RMS_WebAPI\\JWT\\JwtManager.cs",
+              "ToolTip": "E:\\Development\\ResturantManagementSystem\\APIsite\\RMS_WebAPI\\JWT\\JwtManager.cs",
+              "RelativeToolTip": "RMS_WebAPI\\JWT\\JwtManager.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAB8AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-17T17:17:19.081Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "DSelectFoodOrders.cs",
+              "DocumentMoniker": "E:\\Development\\ResturantManagementSystem\\APIsite\\DataAccessLayer\\DataAccess\\Select\\DSelectFoodOrders.cs",
+              "RelativeDocumentMoniker": "DataAccessLayer\\DataAccess\\Select\\DSelectFoodOrders.cs",
+              "ToolTip": "E:\\Development\\ResturantManagementSystem\\APIsite\\DataAccessLayer\\DataAccess\\Select\\DSelectFoodOrders.cs",
+              "RelativeToolTip": "DataAccessLayer\\DataAccess\\Select\\DSelectFoodOrders.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAqwA8AAAAPAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-21T10:40:28.517Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "DUpdateFoodItem.cs",
+              "DocumentMoniker": "E:\\Development\\ResturantManagementSystem\\APIsite\\DataAccessLayer\\DataAccess\\Update\\DUpdateFoodItem.cs",
+              "RelativeDocumentMoniker": "DataAccessLayer\\DataAccess\\Update\\DUpdateFoodItem.cs",
+              "ToolTip": "E:\\Development\\ResturantManagementSystem\\APIsite\\DataAccessLayer\\DataAccess\\Update\\DUpdateFoodItem.cs",
+              "RelativeToolTip": "DataAccessLayer\\DataAccess\\Update\\DUpdateFoodItem.cs",
+              "ViewState": "AgIAABMAAAAAAAAAAAAgwBQAAAAaAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-21T10:41:00.292Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "CommonFoodOrder.cs",
+              "DocumentMoniker": "E:\\Development\\ResturantManagementSystem\\APIsite\\CommonDataModel\\CommonFoodOrder.cs",
+              "RelativeDocumentMoniker": "CommonDataModel\\CommonFoodOrder.cs",
+              "ToolTip": "E:\\Development\\ResturantManagementSystem\\APIsite\\CommonDataModel\\CommonFoodOrder.cs",
+              "RelativeToolTip": "CommonDataModel\\CommonFoodOrder.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAmAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-21T16:48:10.939Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "DUpdateTable.cs",
+              "DocumentMoniker": "E:\\Development\\ResturantManagementSystem\\APIsite\\DataAccessLayer\\DataAccess\\Update\\DUpdateTable.cs",
+              "RelativeDocumentMoniker": "DataAccessLayer\\DataAccess\\Update\\DUpdateTable.cs",
+              "ToolTip": "E:\\Development\\ResturantManagementSystem\\APIsite\\DataAccessLayer\\DataAccess\\Update\\DUpdateTable.cs",
+              "RelativeToolTip": "DataAccessLayer\\DataAccess\\Update\\DUpdateTable.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABQAAAAiAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-21T10:41:19.003Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "App.config",
+              "DocumentMoniker": "E:\\Development\\ResturantManagementSystem\\APIsite\\DBModel\\App.config",
+              "RelativeDocumentMoniker": "DBModel\\App.config",
+              "ToolTip": "E:\\Development\\ResturantManagementSystem\\APIsite\\DBModel\\App.config",
+              "RelativeToolTip": "DBModel\\App.config",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABYAAAAQAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000601|",
+              "WhenOpened": "2026-02-21T10:41:35.308Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "Web.config",
+              "DocumentMoniker": "E:\\Development\\ResturantManagementSystem\\APIsite\\RMS_WebAPI\\Web.config",
+              "RelativeDocumentMoniker": "RMS_WebAPI\\Web.config",
+              "ToolTip": "E:\\Development\\ResturantManagementSystem\\APIsite\\RMS_WebAPI\\Web.config",
+              "RelativeToolTip": "RMS_WebAPI\\Web.config",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAAgAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000601|",
+              "WhenOpened": "2026-02-21T10:44:28.843Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "DSelectTables.cs",
+              "DocumentMoniker": "E:\\Development\\ResturantManagementSystem\\APIsite\\DataAccessLayer\\DataAccess\\Select\\DSelectTables.cs",
+              "RelativeDocumentMoniker": "DataAccessLayer\\DataAccess\\Select\\DSelectTables.cs",
+              "ToolTip": "E:\\Development\\ResturantManagementSystem\\APIsite\\DataAccessLayer\\DataAccess\\Select\\DSelectTables.cs",
+              "RelativeToolTip": "DataAccessLayer\\DataAccess\\Select\\DSelectTables.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAAiAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-21T10:40:37.301Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "DSelectFoodItem.cs",
+              "DocumentMoniker": "E:\\Development\\ResturantManagementSystem\\APIsite\\DataAccessLayer\\DataAccess\\Select\\DSelectFoodItem.cs",
+              "RelativeDocumentMoniker": "DataAccessLayer\\DataAccess\\Select\\DSelectFoodItem.cs",
+              "ToolTip": "E:\\Development\\ResturantManagementSystem\\APIsite\\DataAccessLayer\\DataAccess\\Select\\DSelectFoodItem.cs",
+              "RelativeToolTip": "DataAccessLayer\\DataAccess\\Select\\DSelectFoodItem.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAAiAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-21T10:40:05.532Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 19,
+              "Title": "DSelectFoodCategory.cs",
+              "DocumentMoniker": "E:\\Development\\ResturantManagementSystem\\APIsite\\DataAccessLayer\\DataAccess\\Select\\DSelectFoodCategory.cs",
+              "RelativeDocumentMoniker": "DataAccessLayer\\DataAccess\\Select\\DSelectFoodCategory.cs",
+              "ToolTip": "E:\\Development\\ResturantManagementSystem\\APIsite\\DataAccessLayer\\DataAccess\\Select\\DSelectFoodCategory.cs",
+              "RelativeToolTip": "DataAccessLayer\\DataAccess\\Select\\DSelectFoodCategory.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAiAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-21T10:39:52.697Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 20,
+              "Title": "DInsertFoodOrderDetails.cs",
+              "DocumentMoniker": "E:\\Development\\ResturantManagementSystem\\APIsite\\DataAccessLayer\\DataAccess\\Insert\\DInsertFoodOrderDetails.cs",
+              "RelativeDocumentMoniker": "DataAccessLayer\\DataAccess\\Insert\\DInsertFoodOrderDetails.cs",
+              "ToolTip": "E:\\Development\\ResturantManagementSystem\\APIsite\\DataAccessLayer\\DataAccess\\Insert\\DInsertFoodOrderDetails.cs",
+              "RelativeToolTip": "DataAccessLayer\\DataAccess\\Insert\\DInsertFoodOrderDetails.cs",
+              "ViewState": "AgIAAA4AAAAAAAAAAAAQwC8AAAAmAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-21T10:39:40.962Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 22,
+              "Title": "DInsertFoodItem.cs",
+              "DocumentMoniker": "E:\\Development\\ResturantManagementSystem\\APIsite\\DataAccessLayer\\DataAccess\\Insert\\DInsertFoodItem.cs",
+              "RelativeDocumentMoniker": "DataAccessLayer\\DataAccess\\Insert\\DInsertFoodItem.cs",
+              "ToolTip": "E:\\Development\\ResturantManagementSystem\\APIsite\\DataAccessLayer\\DataAccess\\Insert\\DInsertFoodItem.cs",
+              "RelativeToolTip": "DataAccessLayer\\DataAccess\\Insert\\DInsertFoodItem.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAAaAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-21T10:39:32.318Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 23,
+              "Title": "DInsertFoodCategory.cs",
+              "DocumentMoniker": "E:\\Development\\ResturantManagementSystem\\APIsite\\DataAccessLayer\\DataAccess\\Insert\\DInsertFoodCategory.cs",
+              "RelativeDocumentMoniker": "DataAccessLayer\\DataAccess\\Insert\\DInsertFoodCategory.cs",
+              "ToolTip": "E:\\Development\\ResturantManagementSystem\\APIsite\\DataAccessLayer\\DataAccess\\Insert\\DInsertFoodCategory.cs",
+              "RelativeToolTip": "DataAccessLayer\\DataAccess\\Insert\\DInsertFoodCategory.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAAaAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-21T10:39:20.51Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 21,
+              "Title": "DDeleteFoodItem.cs",
+              "DocumentMoniker": "E:\\Development\\ResturantManagementSystem\\APIsite\\DataAccessLayer\\DataAccess\\Delete\\DDeleteFoodItem.cs",
+              "RelativeDocumentMoniker": "DataAccessLayer\\DataAccess\\Delete\\DDeleteFoodItem.cs",
+              "ToolTip": "E:\\Development\\ResturantManagementSystem\\APIsite\\DataAccessLayer\\DataAccess\\Delete\\DDeleteFoodItem.cs",
+              "RelativeToolTip": "DataAccessLayer\\DataAccess\\Delete\\DDeleteFoodItem.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAcAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-21T10:39:06.213Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 25,
+              "Title": "Model1.edmx [Diagram1]",
+              "DocumentMoniker": "E:\\Development\\ResturantManagementSystem\\APIsite\\DBModel\\Model1.edmx",
+              "RelativeDocumentMoniker": "DBModel\\Model1.edmx",
+              "ToolTip": "E:\\Development\\ResturantManagementSystem\\APIsite\\DBModel\\Model1.edmx [Diagram1]",
+              "RelativeToolTip": "DBModel\\Model1.edmx [Diagram1]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001116|",
+              "WhenOpened": "2026-02-21T10:37:14.125Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 24,
+              "Title": "DeleteController.cs",
+              "DocumentMoniker": "E:\\Development\\ResturantManagementSystem\\APIsite\\RMS_WebAPI\\Controllers\\DeleteController.cs",
+              "RelativeDocumentMoniker": "RMS_WebAPI\\Controllers\\DeleteController.cs",
+              "ToolTip": "E:\\Development\\ResturantManagementSystem\\APIsite\\RMS_WebAPI\\Controllers\\DeleteController.cs",
+              "RelativeToolTip": "RMS_WebAPI\\Controllers\\DeleteController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-20T19:18:00.861Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 28,
+              "Title": "CommonController.cs",
+              "DocumentMoniker": "E:\\Development\\ResturantManagementSystem\\APIsite\\RMS_WebAPI\\Controllers\\CommonController.cs",
+              "RelativeDocumentMoniker": "RMS_WebAPI\\Controllers\\CommonController.cs",
+              "ToolTip": "E:\\Development\\ResturantManagementSystem\\APIsite\\RMS_WebAPI\\Controllers\\CommonController.cs",
+              "RelativeToolTip": "RMS_WebAPI\\Controllers\\CommonController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-20T19:17:48.993Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 26,
+              "Title": "CommonUser.cs",
+              "DocumentMoniker": "E:\\Development\\ResturantManagementSystem\\APIsite\\CommonDataModel\\CommonUser.cs",
+              "RelativeDocumentMoniker": "CommonDataModel\\CommonUser.cs",
+              "ToolTip": "E:\\Development\\ResturantManagementSystem\\APIsite\\CommonDataModel\\CommonUser.cs",
+              "RelativeToolTip": "CommonDataModel\\CommonUser.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-17T17:27:41.735Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 30,
+              "Title": "RegisterModel.cs",
+              "DocumentMoniker": "E:\\Development\\ResturantManagementSystem\\APIsite\\CommonDataModel\\RegisterModel.cs",
+              "RelativeDocumentMoniker": "CommonDataModel\\RegisterModel.cs",
+              "ToolTip": "E:\\Development\\ResturantManagementSystem\\APIsite\\CommonDataModel\\RegisterModel.cs",
+              "RelativeToolTip": "CommonDataModel\\RegisterModel.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAlAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-17T17:20:33.984Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 27,
+              "Title": "UpdateController.cs",
+              "DocumentMoniker": "E:\\Development\\ResturantManagementSystem\\APIsite\\RMS_WebAPI\\Controllers\\UpdateController.cs",
+              "RelativeDocumentMoniker": "RMS_WebAPI\\Controllers\\UpdateController.cs",
+              "ToolTip": "E:\\Development\\ResturantManagementSystem\\APIsite\\RMS_WebAPI\\Controllers\\UpdateController.cs",
+              "RelativeToolTip": "RMS_WebAPI\\Controllers\\UpdateController.cs",
+              "ViewState": "AgIAABkAAAAAAAAAAAAgwBIAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-20T19:19:18.088Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 29,
+              "Title": "LoginModel.cs",
+              "DocumentMoniker": "E:\\Development\\ResturantManagementSystem\\APIsite\\CommonDataModel\\LoginModel.cs",
+              "RelativeDocumentMoniker": "CommonDataModel\\LoginModel.cs",
+              "ToolTip": "E:\\Development\\ResturantManagementSystem\\APIsite\\CommonDataModel\\LoginModel.cs",
+              "RelativeToolTip": "CommonDataModel\\LoginModel.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAqwAsAAAAeAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-17T17:20:05.383Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 31,
+              "Title": "Startup.cs",
+              "DocumentMoniker": "E:\\Development\\ResturantManagementSystem\\APIsite\\RMS_WebAPI\\Startup.cs",
+              "RelativeDocumentMoniker": "RMS_WebAPI\\Startup.cs",
+              "ToolTip": "E:\\Development\\ResturantManagementSystem\\APIsite\\RMS_WebAPI\\Startup.cs",
+              "RelativeToolTip": "RMS_WebAPI\\Startup.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-17T17:12:15.943Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

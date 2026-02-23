@@ -11,13 +11,14 @@ namespace BussinessLogicLayer.Select
 {
     public class BSelectFoodAllForOrder
     {
-        private object GetFoodListsForOrder(string category)
+        private object GetFoodListsForOrder(long categoryId)
         {
             try
             {
                 ISelectFoodItem iSelectFoodItem = new DSelectFoodItem();
 
                 var foodList = iSelectFoodItem.SelectFoodAll()
+                    .WhereIf(categoryId > 0, x => x.CategoryID == categoryId)
                     .Select(s => new
                     {
                         s.FoodItemID,
@@ -28,11 +29,6 @@ namespace BussinessLogicLayer.Select
                         s.CategoryID,
                         FoodId = s.FoodItemID.ToString()
                     })
-                    .WhereIf(category == "MET", x => x.CategoryID == 1)
-                    .WhereIf(category == "FIS", x => x.CategoryID == 2)
-                    .WhereIf(category == "BAR", x => x.CategoryID == 3)
-                    .WhereIf(category == "DRK", x => x.CategoryID == 4)
-                    .WhereIf(category == "DRT", x => x.CategoryID == 5)
                     .OrderBy( o => new {o.FoodName})
                     .ToList();
                 return foodList;
@@ -43,11 +39,11 @@ namespace BussinessLogicLayer.Select
             }
         }
 
-        public object SelectAllFoodListForOrder(string category)
+        public object SelectAllFoodListForOrder(long categoryId)
         {
             try
             {
-                return GetFoodListsForOrder(category);
+                return GetFoodListsForOrder(categoryId);
             }
             catch (Exception ex)
             {

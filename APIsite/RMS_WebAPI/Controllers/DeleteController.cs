@@ -13,6 +13,7 @@ namespace RMS_WebAPI.Controllers
     [RoutePrefix("api")]
     public class DeleteController : ApiController
     {
+        [Authorize(Roles = "Admin")]
         [HttpPost]
         [Route("D281224")]
         public IHttpActionResult DeleteFoodItem(long FoodItemId)

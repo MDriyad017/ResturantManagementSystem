@@ -12,12 +12,12 @@ namespace DataAccessLayer.DataAccess.Insert
 {
     public class DInsertFoodCategory : IInsertFoodCategory
     {
-        private Resturant_ProjectEntities _db;
+        private RMS_Entities _db;
         private setup_FoodCategory _entity;
 
         public DInsertFoodCategory(CommonFoodCategory entity)
         {
-            _db = new Resturant_ProjectEntities();
+            _db = new RMS_Entities();
             _entity = new setup_FoodCategory
             {
                 CategoryID = entity.CategoryID,

@@ -13,12 +13,12 @@ namespace DataAccessLayer.DataAccess.Update
 {
     public class DUpdateTable : IUpdateTable
     {
-        private Resturant_ProjectEntities _db;
+        private RMS_Entities _db;
         private TableNo _findEntity;
 
         public DUpdateTable(int tableId)
         {
-            _db = new Resturant_ProjectEntities();
+            _db = new RMS_Entities();
             _db.Configuration.LazyLoadingEnabled = false;
 
             _findEntity = _db.TableNoes.Find(tableId);

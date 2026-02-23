@@ -15,7 +15,7 @@ namespace RMS_WebAPI.Controllers
     [RoutePrefix("api")]
     public class AuthController : ApiController
     {
-        private readonly Resturant_ProjectEntities _context = new Resturant_ProjectEntities();
+        private readonly RMS_Entities _context = new RMS_Entities();
 
         [HttpPost]
         [Route("register001")]
@@ -39,6 +39,7 @@ namespace RMS_WebAPI.Controllers
 
             var user = new DBModel.User
             {
+                UserId = Guid.NewGuid(),
                 FullName = model.FullName,
                 UserName = model.UserName,
                 PasswordHash = passwordHash,
@@ -64,6 +65,7 @@ namespace RMS_WebAPI.Controllers
                         where u.UserName == model.UserName && u.IsActive == true
                         select new
                         {
+                            u.UserId,
                             u.UserName,
                             u.PasswordHash,
                             RoleName = r.RoleName
@@ -75,7 +77,7 @@ namespace RMS_WebAPI.Controllers
             if (!BCrypt.Net.BCrypt.Verify(model.Password, user.PasswordHash))
                 return Ok(new { message = "Invalid username or password", success = false });
 
-            var token = JwtManager.GenerateToken(user.UserName, user.RoleName);
+            var token = JwtManager.GenerateToken(user.UserName, user.RoleName, user.UserId);
 
             return Ok(new
             {

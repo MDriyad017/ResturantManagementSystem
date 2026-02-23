@@ -4,18 +4,19 @@
   <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
-      <Diagram DiagramId="3c7ca1022b4d42f1965f22360fe5b3e6" Name="Diagram1">
-        <EntityTypeShape EntityType="Resturant_DBContext.FoodOrderDetail" Width="1.5" PointX="5.25" PointY="1" />
-        <EntityTypeShape EntityType="Resturant_DBContext.setup_FoodCategory" Width="1.5" PointX="0.75" PointY="5.375" />
-        <EntityTypeShape EntityType="Resturant_DBContext.setup_FoodItem" Width="1.5" PointX="3" PointY="4.875" />
-        <EntityTypeShape EntityType="Resturant_DBContext.setup_FoodOrder" Width="1.5" PointX="3" PointY="1" />
-        <EntityTypeShape EntityType="Resturant_DBContext.TableNo" Width="1.5" PointX="0.75" PointY="1.25" />
-        <AssociationConnector Association="Resturant_DBContext.FK__FoodOrder__FoodI__4D94879B" />
-        <AssociationConnector Association="Resturant_DBContext.FK__FoodOrder__Order__4CA06362" />
-        <AssociationConnector Association="Resturant_DBContext.FK__setup_Foo__Categ__1920BF5C" />
-        <AssociationConnector Association="Resturant_DBContext.FK__setup_Foo__Table__6FE99F9F" />
-        <EntityTypeShape EntityType="Resturant_DBContext.Role" Width="1.5" PointX="5.375" PointY="4.75" />
-        <EntityTypeShape EntityType="Resturant_DBContext.User" Width="1.5" PointX="7.375" PointY="0.75" />
+      <Diagram DiagramId="dd021588cb5347f5b872d261fdb6f104" Name="Diagram1">
+        <EntityTypeShape EntityType="Resturant_ProjectModel.FoodOrderDetail" Width="1.5" PointX="5.25" PointY="1.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="Resturant_ProjectModel.Role" Width="1.5" PointX="2.75" PointY="4.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="Resturant_ProjectModel.setup_FoodCategory" Width="1.5" PointX="0.75" PointY="9.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="Resturant_ProjectModel.setup_FoodItem" Width="1.5" PointX="3" PointY="9" IsExpanded="true" />
+        <EntityTypeShape EntityType="Resturant_ProjectModel.setup_FoodOrder" Width="1.5" PointX="3" PointY="1" IsExpanded="true" />
+        <EntityTypeShape EntityType="Resturant_ProjectModel.TableNo" Width="1.5" PointX="0.75" PointY="1.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="Resturant_ProjectModel.User" Width="1.5" PointX="0.75" PointY="5.125" IsExpanded="true" />
+        <AssociationConnector Association="Resturant_ProjectModel.FK__FoodOrder__FoodI__4D94879B" ManuallyRouted="false" />
+        <AssociationConnector Association="Resturant_ProjectModel.FK__FoodOrder__Order__4CA06362" ManuallyRouted="false" />
+        <AssociationConnector Association="Resturant_ProjectModel.FK__setup_Foo__Categ__1920BF5C" ManuallyRouted="false" />
+        <AssociationConnector Association="Resturant_ProjectModel.FK__setup_Foo__Table__6FE99F9F" ManuallyRouted="false" />
+        <AssociationConnector Association="Resturant_ProjectModel.FK_setup_FoodOrder_Users" ManuallyRouted="false" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

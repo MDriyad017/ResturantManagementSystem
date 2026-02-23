@@ -12,12 +12,12 @@ namespace DataAccessLayer.DataAccess.Insert
 {
     public class DInsertFoodOrderDetails : IInsertFoodOrderDetails
     {
-        private Resturant_ProjectEntities _db;
+        private RMS_Entities _db;
         private FoodOrderDetail _orderDetails;
 
         public DInsertFoodOrderDetails()
         {
-            _db = new Resturant_ProjectEntities();
+            _db = new RMS_Entities();
         }
 
         [OperationBehavior(TransactionScopeRequired = true, TransactionAutoComplete = true)]
@@ -45,7 +45,7 @@ namespace DataAccessLayer.DataAccess.Insert
                     {
                         _db.SaveChanges();
                         _db.Dispose();
-                        _db = new Resturant_ProjectEntities();
+                        _db = new RMS_Entities();
                         _db.Configuration.AutoDetectChangesEnabled = false;
                     }
                 }

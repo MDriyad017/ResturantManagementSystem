@@ -24,9 +24,12 @@ namespace DBModel
         public decimal TotalPrice { get; set; }
         public int TableID { get; set; }
         public Nullable<bool> IsPayementDone { get; set; }
+        public Nullable<System.DateTime> OrderDate { get; set; }
+        public System.Guid UserId { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<FoodOrderDetail> FoodOrderDetails { get; set; }
         public virtual TableNo TableNo { get; set; }
+        public virtual User User { get; set; }
     }
 }

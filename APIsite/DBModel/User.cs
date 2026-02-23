@@ -14,11 +14,20 @@ namespace DBModel
     
     public partial class User
     {
-        public int UserId { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
+        public User()
+        {
+            this.setup_FoodOrder = new HashSet<setup_FoodOrder>();
+        }
+    
+        public System.Guid UserId { get; set; }
         public string FullName { get; set; }
         public string UserName { get; set; }
         public string PasswordHash { get; set; }
-        public int RoleId { get; set; }
+        public Nullable<int> RoleId { get; set; }
         public Nullable<bool> IsActive { get; set; }
+    
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<setup_FoodOrder> setup_FoodOrder { get; set; }
     }
 }

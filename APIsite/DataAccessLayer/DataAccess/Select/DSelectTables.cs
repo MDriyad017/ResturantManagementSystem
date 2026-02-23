@@ -11,11 +11,11 @@ namespace DataAccessLayer.DataAccess.Select
 {
     public class DSelectTables : ISelectTables
     {
-        private Resturant_ProjectEntities _db;
+        private RMS_Entities _db;
 
         public DSelectTables()
         {
-            _db = new Resturant_ProjectEntities();
+            _db = new RMS_Entities();
         }
 
         [OperationBehavior(TransactionScopeRequired = true, TransactionAutoComplete = true)]

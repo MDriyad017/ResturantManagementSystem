@@ -12,12 +12,12 @@ namespace DataAccessLayer.DataAccess.Update
 {
     public class DUpdateFoodOrder : IUpdateFoodOrder
     {
-        private Resturant_ProjectEntities _db;
+        private RMS_Entities _db;
         private setup_FoodOrder _findEntity;
 
         public DUpdateFoodOrder(Guid orderId)
         {
-            _db = new Resturant_ProjectEntities();
+            _db = new RMS_Entities();
             _db.Configuration.LazyLoadingEnabled = false;
 
             _findEntity = _db.setup_FoodOrder.Find(orderId);

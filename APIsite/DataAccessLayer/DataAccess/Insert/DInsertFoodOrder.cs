@@ -12,18 +12,20 @@ namespace DataAccessLayer.DataAccess.Insert
 {
     public class DInsertFoodOrder : IInsertFoodOrder
     {
-        private Resturant_ProjectEntities _db;
+        private RMS_Entities _db;
         private setup_FoodOrder _entity;
 
         public DInsertFoodOrder(CommonFoodOrder entity)
         {
-            _db = new Resturant_ProjectEntities();
+            _db = new RMS_Entities();
             _entity = new setup_FoodOrder
             {
                 OrderId = entity.OrderId,
                 TableID = entity.TableID,
                 TotalPrice = entity.TotalFoodPrice,
-                IsPayementDone = false
+                IsPayementDone = false,
+                OrderDate = DateTime.Now,
+                UserId = entity.UserId
             };
         }
 

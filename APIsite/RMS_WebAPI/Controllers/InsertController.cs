@@ -14,6 +14,7 @@ namespace RMS_WebAPI.Controllers
 	[RoutePrefix("api")]
 	public class InsertController : ApiController
     {
+        [Authorize(Roles = "Admin")]
         [HttpPost]
         [Route("IN281124")]
         public IHttpActionResult InsertFoodCategory(CommonFoodCategory entityList)
@@ -30,6 +31,7 @@ namespace RMS_WebAPI.Controllers
             }
         }
 
+        [Authorize(Roles = "Admin")]
         [HttpPost]
         [Route("IN141024")]
         public IHttpActionResult InsertFoodItem(CommonFoodItem entityList)

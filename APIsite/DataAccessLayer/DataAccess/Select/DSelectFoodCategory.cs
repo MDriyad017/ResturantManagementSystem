@@ -10,11 +10,11 @@ namespace DataAccessLayer
 {
 	public class DSelectFoodCategory : ISelectFoodCategory
 	{
-		private Resturant_ProjectEntities _db;
+		private RMS_Entities _db;
 
         public DSelectFoodCategory()
         {
-            _db = new Resturant_ProjectEntities();
+            _db = new RMS_Entities();
         }
 
 		[OperationBehavior(TransactionScopeRequired = true, TransactionAutoComplete = true)]

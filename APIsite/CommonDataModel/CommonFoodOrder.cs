@@ -8,6 +8,7 @@ namespace CommonDataModel
 {
     public class CommonFoodOrder
     {
+        public Guid UserId { get; set; }
         public Guid OrderId { get; set; }
         public decimal TotalFoodPrice { get; set; }
         public int TableID { get; set; }

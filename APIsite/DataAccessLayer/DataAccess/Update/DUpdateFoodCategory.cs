@@ -13,12 +13,12 @@ namespace DataAccessLayer.DataAccess.Update
 {
     public class DUpdateFoodCategory : IUpdateFoodCategory
     {
-        private Resturant_ProjectEntities _db;
+        private RMS_Entities _db;
         private setup_FoodCategory _findEntity;
 
         public DUpdateFoodCategory(CommonFoodCategory entity)
         {
-            _db = new Resturant_ProjectEntities();
+            _db = new RMS_Entities();
             _db.Configuration.LazyLoadingEnabled = false;
 
             _findEntity = _db.setup_FoodCategory.Find(entity.CategoryID);

@@ -13,6 +13,7 @@ namespace RMS_WebAPI.Controllers
 	[RoutePrefix("api")]
     public class SelectController : ApiController
     {
+        [Authorize(Roles = "Admin")]
         [HttpGet]
         [Route("241124")]
         public IHttpActionResult SelectFoodCategoryList(string query, int pageIndex, int pageSize)
@@ -47,12 +48,12 @@ namespace RMS_WebAPI.Controllers
 
         [HttpGet]
         [Route("G020125")]
-        public IHttpActionResult SelectFoodItemLists(string category)
+        public IHttpActionResult SelectFoodItemLists(long categoryId)
         {
             try
             {
                 var data = new BSelectFoodAllForOrder()
-                    .SelectAllFoodListForOrder(category);
+                    .SelectAllFoodListForOrder(categoryId);
                 return Ok(data);
             }
             catch (Exception ex)
@@ -77,9 +78,10 @@ namespace RMS_WebAPI.Controllers
             }
         }
 
+        [Authorize(Roles = "Admin")]
         [HttpGet]
         [Route("G250225")]
-        public IHttpActionResult SelectOrderDetailsList(string query, int pageIndex, int pageSize)
+        public IHttpActionResult SelectOrderList(string query, int pageIndex, int pageSize)
         {
             try
             {
@@ -93,5 +95,21 @@ namespace RMS_WebAPI.Controllers
             }
         }
 
+        [Authorize(Roles = "Admin")]
+        [HttpGet]
+        [Route("G220226")]
+        public IHttpActionResult SelectOrderDetailsList(Guid orderId)
+        {
+            try
+            {
+                var data = new BSelectFoodOrders()
+                    .SelectOrderDetailList(orderId);
+                return Ok(data);
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
     }
 }

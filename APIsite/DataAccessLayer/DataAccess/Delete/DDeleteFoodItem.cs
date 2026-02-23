@@ -11,12 +11,12 @@ namespace DataAccessLayer.DataAccess.Delete
 {
     public class DDeleteFoodItem : IDeleteFoodItem
     {
-        private Resturant_ProjectEntities _db;
+        private RMS_Entities _db;
         private setup_FoodItem _findEntity;
 
         public DDeleteFoodItem(long foodItemId)
         {
-            _db = new Resturant_ProjectEntities();
+            _db = new RMS_Entities();
             _findEntity = _db.setup_FoodItem.Find(foodItemId);
         }
 

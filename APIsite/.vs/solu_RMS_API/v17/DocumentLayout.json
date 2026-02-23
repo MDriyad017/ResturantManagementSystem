@@ -3,6 +3,26 @@
   "WorkspaceRootPath": "E:\\Development\\ResturantManagementSystem\\APIsite\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{1C0C0331-84D2-4450-B357-063C4DAAC0E3}|RMS_WebAPI\\RMS_WebAPI.csproj|e:\\development\\resturantmanagementsystem\\apisite\\rms_webapi\\controllers\\updatecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1C0C0331-84D2-4450-B357-063C4DAAC0E3}|RMS_WebAPI\\RMS_WebAPI.csproj|solutionrelative:rms_webapi\\controllers\\updatecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1C0C0331-84D2-4450-B357-063C4DAAC0E3}|RMS_WebAPI\\RMS_WebAPI.csproj|E:\\Development\\ResturantManagementSystem\\APIsite\\rms_webapi\\controllers\\selectcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1C0C0331-84D2-4450-B357-063C4DAAC0E3}|RMS_WebAPI\\RMS_WebAPI.csproj|solutionrelative:rms_webapi\\controllers\\selectcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1C0C0331-84D2-4450-B357-063C4DAAC0E3}|RMS_WebAPI\\RMS_WebAPI.csproj|E:\\Development\\ResturantManagementSystem\\APIsite\\rms_webapi\\controllers\\insertcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1C0C0331-84D2-4450-B357-063C4DAAC0E3}|RMS_WebAPI\\RMS_WebAPI.csproj|solutionrelative:rms_webapi\\controllers\\insertcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1C0C0331-84D2-4450-B357-063C4DAAC0E3}|RMS_WebAPI\\RMS_WebAPI.csproj|e:\\development\\resturantmanagementsystem\\apisite\\rms_webapi\\controllers\\deletecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1C0C0331-84D2-4450-B357-063C4DAAC0E3}|RMS_WebAPI\\RMS_WebAPI.csproj|solutionrelative:rms_webapi\\controllers\\deletecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1C0C0331-84D2-4450-B357-063C4DAAC0E3}|RMS_WebAPI\\RMS_WebAPI.csproj|e:\\development\\resturantmanagementsystem\\apisite\\rms_webapi\\controllers\\commoncontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1C0C0331-84D2-4450-B357-063C4DAAC0E3}|RMS_WebAPI\\RMS_WebAPI.csproj|solutionrelative:rms_webapi\\controllers\\commoncontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{1C0C0331-84D2-4450-B357-063C4DAAC0E3}|RMS_WebAPI\\RMS_WebAPI.csproj|e:\\development\\resturantmanagementsystem\\apisite\\rms_webapi\\controllers\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{1C0C0331-84D2-4450-B357-063C4DAAC0E3}|RMS_WebAPI\\RMS_WebAPI.csproj|solutionrelative:rms_webapi\\controllers\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -13,14 +33,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{0536421D-3B67-4665-92CF-8958A46E480D}|CommonDataModel\\CommonDataModel.csproj|E:\\Development\\ResturantManagementSystem\\APIsite\\commondatamodel\\registermodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{0536421D-3B67-4665-92CF-8958A46E480D}|CommonDataModel\\CommonDataModel.csproj|solutionrelative:commondatamodel\\registermodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{1C0C0331-84D2-4450-B357-063C4DAAC0E3}|RMS_WebAPI\\RMS_WebAPI.csproj|E:\\Development\\ResturantManagementSystem\\APIsite\\rms_webapi\\controllers\\selectcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{1C0C0331-84D2-4450-B357-063C4DAAC0E3}|RMS_WebAPI\\RMS_WebAPI.csproj|solutionrelative:rms_webapi\\controllers\\selectcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{1C0C0331-84D2-4450-B357-063C4DAAC0E3}|RMS_WebAPI\\RMS_WebAPI.csproj|E:\\Development\\ResturantManagementSystem\\APIsite\\rms_webapi\\controllers\\insertcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{1C0C0331-84D2-4450-B357-063C4DAAC0E3}|RMS_WebAPI\\RMS_WebAPI.csproj|solutionrelative:rms_webapi\\controllers\\insertcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{0536421D-3B67-4665-92CF-8958A46E480D}|CommonDataModel\\CommonDataModel.csproj|E:\\Development\\ResturantManagementSystem\\APIsite\\commondatamodel\\commonuser.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -46,43 +58,45 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": 3,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 1,
               "Title": "SelectController.cs",
               "DocumentMoniker": "E:\\Development\\ResturantManagementSystem\\APIsite\\RMS_WebAPI\\Controllers\\SelectController.cs",
               "RelativeDocumentMoniker": "RMS_WebAPI\\Controllers\\SelectController.cs",
               "ToolTip": "E:\\Development\\ResturantManagementSystem\\APIsite\\RMS_WebAPI\\Controllers\\SelectController.cs",
               "RelativeToolTip": "RMS_WebAPI\\Controllers\\SelectController.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAD4AAAAIAAAAAAAAAA==",
+              "ViewState": "AgIAADIAAAAAAAAAAAAwwD4AAAAIAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-04-20T07:42:44.667Z",
-              "IsPinned": true
+              "IsPinned": true,
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 2,
               "Title": "InsertController.cs",
               "DocumentMoniker": "E:\\Development\\ResturantManagementSystem\\APIsite\\RMS_WebAPI\\Controllers\\InsertController.cs",
               "RelativeDocumentMoniker": "RMS_WebAPI\\Controllers\\InsertController.cs",
               "ToolTip": "E:\\Development\\ResturantManagementSystem\\APIsite\\RMS_WebAPI\\Controllers\\InsertController.cs",
               "RelativeToolTip": "RMS_WebAPI\\Controllers\\InsertController.cs",
-              "ViewState": "AgIAAAMAAAAAAAAAAAAAADgAAAAtAAAAAAAAAA==",
+              "ViewState": "AgIAABYAAAAAAAAAAAAgwDsAAAAgAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-01-17T05:41:04.258Z",
-              "IsPinned": true
+              "IsPinned": true,
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 5,
               "Title": "AuthController.cs",
               "DocumentMoniker": "E:\\Development\\ResturantManagementSystem\\APIsite\\RMS_WebAPI\\Controllers\\AuthController.cs",
               "RelativeDocumentMoniker": "RMS_WebAPI\\Controllers\\AuthController.cs",
               "ToolTip": "E:\\Development\\ResturantManagementSystem\\APIsite\\RMS_WebAPI\\Controllers\\AuthController.cs",
               "RelativeToolTip": "RMS_WebAPI\\Controllers\\AuthController.cs",
-              "ViewState": "AgIAAAoAAAAAAAAAAAAiwDUAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAoAAAAAAAAAAAAiwCAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-01-17T17:18:08.014Z",
               "IsPinned": true,
@@ -90,7 +104,46 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 0,
+              "Title": "UpdateController.cs",
+              "DocumentMoniker": "E:\\Development\\ResturantManagementSystem\\APIsite\\RMS_WebAPI\\Controllers\\UpdateController.cs",
+              "RelativeDocumentMoniker": "RMS_WebAPI\\Controllers\\UpdateController.cs",
+              "ToolTip": "E:\\Development\\ResturantManagementSystem\\APIsite\\RMS_WebAPI\\Controllers\\UpdateController.cs",
+              "RelativeToolTip": "RMS_WebAPI\\Controllers\\UpdateController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAC8AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-20T19:19:18.088Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "DeleteController.cs",
+              "DocumentMoniker": "E:\\Development\\ResturantManagementSystem\\APIsite\\RMS_WebAPI\\Controllers\\DeleteController.cs",
+              "RelativeDocumentMoniker": "RMS_WebAPI\\Controllers\\DeleteController.cs",
+              "ToolTip": "E:\\Development\\ResturantManagementSystem\\APIsite\\RMS_WebAPI\\Controllers\\DeleteController.cs",
+              "RelativeToolTip": "RMS_WebAPI\\Controllers\\DeleteController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-20T19:18:00.861Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "CommonController.cs",
+              "DocumentMoniker": "E:\\Development\\ResturantManagementSystem\\APIsite\\RMS_WebAPI\\Controllers\\CommonController.cs",
+              "RelativeDocumentMoniker": "RMS_WebAPI\\Controllers\\CommonController.cs",
+              "ToolTip": "E:\\Development\\ResturantManagementSystem\\APIsite\\RMS_WebAPI\\Controllers\\CommonController.cs",
+              "RelativeToolTip": "RMS_WebAPI\\Controllers\\CommonController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-20T19:17:48.993Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
               "Title": "CommonUser.cs",
               "DocumentMoniker": "E:\\Development\\ResturantManagementSystem\\APIsite\\CommonDataModel\\CommonUser.cs",
               "RelativeDocumentMoniker": "CommonDataModel\\CommonUser.cs",
@@ -102,7 +155,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 7,
               "Title": "RegisterModel.cs",
               "DocumentMoniker": "E:\\Development\\ResturantManagementSystem\\APIsite\\CommonDataModel\\RegisterModel.cs",
               "RelativeDocumentMoniker": "CommonDataModel\\RegisterModel.cs",
@@ -114,7 +167,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 6,
               "Title": "LoginModel.cs",
               "DocumentMoniker": "E:\\Development\\ResturantManagementSystem\\APIsite\\CommonDataModel\\LoginModel.cs",
               "RelativeDocumentMoniker": "CommonDataModel\\LoginModel.cs",
@@ -122,12 +175,11 @@
               "RelativeToolTip": "CommonDataModel\\LoginModel.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAqwAsAAAAeAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-01-17T17:20:05.383Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-01-17T17:20:05.383Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 9,
               "Title": "JwtManager.cs",
               "DocumentMoniker": "E:\\Development\\ResturantManagementSystem\\APIsite\\RMS_WebAPI\\JWT\\JwtManager.cs",
               "RelativeDocumentMoniker": "RMS_WebAPI\\JWT\\JwtManager.cs",
@@ -139,7 +191,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 11,
               "Title": "Startup.cs",
               "DocumentMoniker": "E:\\Development\\ResturantManagementSystem\\APIsite\\RMS_WebAPI\\Startup.cs",
               "RelativeDocumentMoniker": "RMS_WebAPI\\Startup.cs",
@@ -151,7 +203,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 10,
               "Title": "Web.config",
               "DocumentMoniker": "E:\\Development\\ResturantManagementSystem\\APIsite\\RMS_WebAPI\\Web.config",
               "RelativeDocumentMoniker": "RMS_WebAPI\\Web.config",

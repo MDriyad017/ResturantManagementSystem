@@ -1,73 +1,75 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
-  <EntityContainerMapping StorageEntityContainer="Resturant_DBContextStoreContainer" CdmEntityContainer="Resturant_ProjectEntities">
+  <EntityContainerMapping StorageEntityContainer="Resturant_ProjectModelStoreContainer" CdmEntityContainer="RMS_Entities">
     <EntitySetMapping Name="FoodOrderDetails">
-      <EntityTypeMapping TypeName="Resturant_DBContext.FoodOrderDetail">
+      <EntityTypeMapping TypeName="Resturant_ProjectModel.FoodOrderDetail">
         <MappingFragment StoreEntitySet="FoodOrderDetails">
-          <ScalarProperty Name="Price" ColumnName="Price" />
-          <ScalarProperty Name="Quantity" ColumnName="Quantity" />
-          <ScalarProperty Name="FoodId" ColumnName="FoodId" />
-          <ScalarProperty Name="OrderID" ColumnName="OrderID" />
           <ScalarProperty Name="OrderDetailsId" ColumnName="OrderDetailsId" />
-        </MappingFragment>
-      </EntityTypeMapping>
-    </EntitySetMapping>
-    <EntitySetMapping Name="setup_FoodCategory">
-      <EntityTypeMapping TypeName="Resturant_DBContext.setup_FoodCategory">
-        <MappingFragment StoreEntitySet="setup_FoodCategory">
-          <ScalarProperty Name="CategoryName" ColumnName="CategoryName" />
-          <ScalarProperty Name="CategoryID" ColumnName="CategoryID" />
-        </MappingFragment>
-      </EntityTypeMapping>
-    </EntitySetMapping>
-    <EntitySetMapping Name="setup_FoodItem">
-      <EntityTypeMapping TypeName="Resturant_DBContext.setup_FoodItem">
-        <MappingFragment StoreEntitySet="setup_FoodItem">
-          <ScalarProperty Name="CategoryID" ColumnName="CategoryID" />
-          <ScalarProperty Name="Available" ColumnName="Available" />
-          <ScalarProperty Name="Stock" ColumnName="Stock" />
-          <ScalarProperty Name="FoodPrice" ColumnName="FoodPrice" />
-          <ScalarProperty Name="FoodName" ColumnName="FoodName" />
-          <ScalarProperty Name="FoodItemID" ColumnName="FoodItemID" />
-        </MappingFragment>
-      </EntityTypeMapping>
-    </EntitySetMapping>
-    <EntitySetMapping Name="setup_FoodOrder">
-      <EntityTypeMapping TypeName="Resturant_DBContext.setup_FoodOrder">
-        <MappingFragment StoreEntitySet="setup_FoodOrder">
-          <ScalarProperty Name="IsPayementDone" ColumnName="IsPayementDone" />
-          <ScalarProperty Name="TableID" ColumnName="TableID" />
-          <ScalarProperty Name="TotalPrice" ColumnName="TotalPrice" />
-          <ScalarProperty Name="OrderId" ColumnName="OrderId" />
-        </MappingFragment>
-      </EntityTypeMapping>
-    </EntitySetMapping>
-    <EntitySetMapping Name="TableNoes">
-      <EntityTypeMapping TypeName="Resturant_DBContext.TableNo">
-        <MappingFragment StoreEntitySet="TableNo">
-          <ScalarProperty Name="IsAvailableTbl" ColumnName="IsAvailableTbl" />
-          <ScalarProperty Name="Table" ColumnName="Table" />
-          <ScalarProperty Name="TableId" ColumnName="TableId" />
+          <ScalarProperty Name="OrderID" ColumnName="OrderID" />
+          <ScalarProperty Name="FoodId" ColumnName="FoodId" />
+          <ScalarProperty Name="Quantity" ColumnName="Quantity" />
+          <ScalarProperty Name="Price" ColumnName="Price" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="Roles">
-      <EntityTypeMapping TypeName="Resturant_DBContext.Role">
+      <EntityTypeMapping TypeName="Resturant_ProjectModel.Role">
         <MappingFragment StoreEntitySet="Roles">
-          <ScalarProperty Name="RoleName" ColumnName="RoleName" />
           <ScalarProperty Name="RoleId" ColumnName="RoleId" />
+          <ScalarProperty Name="RoleName" ColumnName="RoleName" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="setup_FoodCategory">
+      <EntityTypeMapping TypeName="Resturant_ProjectModel.setup_FoodCategory">
+        <MappingFragment StoreEntitySet="setup_FoodCategory">
+          <ScalarProperty Name="CategoryID" ColumnName="CategoryID" />
+          <ScalarProperty Name="CategoryName" ColumnName="CategoryName" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="setup_FoodItem">
+      <EntityTypeMapping TypeName="Resturant_ProjectModel.setup_FoodItem">
+        <MappingFragment StoreEntitySet="setup_FoodItem">
+          <ScalarProperty Name="FoodItemID" ColumnName="FoodItemID" />
+          <ScalarProperty Name="FoodName" ColumnName="FoodName" />
+          <ScalarProperty Name="FoodPrice" ColumnName="FoodPrice" />
+          <ScalarProperty Name="Stock" ColumnName="Stock" />
+          <ScalarProperty Name="Available" ColumnName="Available" />
+          <ScalarProperty Name="CategoryID" ColumnName="CategoryID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="setup_FoodOrder">
+      <EntityTypeMapping TypeName="Resturant_ProjectModel.setup_FoodOrder">
+        <MappingFragment StoreEntitySet="setup_FoodOrder">
+          <ScalarProperty Name="OrderId" ColumnName="OrderId" />
+          <ScalarProperty Name="TotalPrice" ColumnName="TotalPrice" />
+          <ScalarProperty Name="TableID" ColumnName="TableID" />
+          <ScalarProperty Name="IsPayementDone" ColumnName="IsPayementDone" />
+          <ScalarProperty Name="OrderDate" ColumnName="OrderDate" />
+          <ScalarProperty Name="UserId" ColumnName="UserId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TableNoes">
+      <EntityTypeMapping TypeName="Resturant_ProjectModel.TableNo">
+        <MappingFragment StoreEntitySet="TableNo">
+          <ScalarProperty Name="TableId" ColumnName="TableId" />
+          <ScalarProperty Name="Table" ColumnName="Table" />
+          <ScalarProperty Name="IsAvailableTbl" ColumnName="IsAvailableTbl" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="Users">
-      <EntityTypeMapping TypeName="Resturant_DBContext.User">
+      <EntityTypeMapping TypeName="Resturant_ProjectModel.User">
         <MappingFragment StoreEntitySet="Users">
-          <ScalarProperty Name="IsActive" ColumnName="IsActive" />
-          <ScalarProperty Name="RoleId" ColumnName="RoleId" />
-          <ScalarProperty Name="PasswordHash" ColumnName="PasswordHash" />
-          <ScalarProperty Name="UserName" ColumnName="UserName" />
-          <ScalarProperty Name="FullName" ColumnName="FullName" />
           <ScalarProperty Name="UserId" ColumnName="UserId" />
+          <ScalarProperty Name="FullName" ColumnName="FullName" />
+          <ScalarProperty Name="UserName" ColumnName="UserName" />
+          <ScalarProperty Name="PasswordHash" ColumnName="PasswordHash" />
+          <ScalarProperty Name="RoleId" ColumnName="RoleId" />
+          <ScalarProperty Name="IsActive" ColumnName="IsActive" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>

@@ -13,10 +13,10 @@ namespace DBModel
     using System.Data.Entity;
     using System.Data.Entity.Infrastructure;
     
-    public partial class Resturant_ProjectEntities : DbContext
+    public partial class RMS_Entities : DbContext
     {
-        public Resturant_ProjectEntities()
-            : base("name=Resturant_ProjectEntities")
+        public RMS_Entities()
+            : base("name=RMS_Entities")
         {
         }
     
@@ -26,11 +26,11 @@ namespace DBModel
         }
     
         public virtual DbSet<FoodOrderDetail> FoodOrderDetails { get; set; }
+        public virtual DbSet<Role> Roles { get; set; }
         public virtual DbSet<setup_FoodCategory> setup_FoodCategory { get; set; }
         public virtual DbSet<setup_FoodItem> setup_FoodItem { get; set; }
         public virtual DbSet<setup_FoodOrder> setup_FoodOrder { get; set; }
         public virtual DbSet<TableNo> TableNoes { get; set; }
-        public virtual DbSet<Role> Roles { get; set; }
         public virtual DbSet<User> Users { get; set; }
     }
 }

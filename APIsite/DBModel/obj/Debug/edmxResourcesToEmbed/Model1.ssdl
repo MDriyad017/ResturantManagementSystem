@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Schema Namespace="Resturant_DBContext.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+<Schema Namespace="Resturant_ProjectModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
   <EntityType Name="FoodOrderDetails">
     <Key>
       <PropertyRef Name="OrderDetailsId" />
@@ -43,6 +43,8 @@
     <Property Name="TotalPrice" Type="numeric" Precision="18" Scale="4" Nullable="false" />
     <Property Name="TableID" Type="int" Nullable="false" />
     <Property Name="IsPayementDone" Type="bit" />
+    <Property Name="OrderDate" Type="datetime" />
+    <Property Name="UserId" Type="uniqueidentifier" Nullable="false" />
   </EntityType>
   <EntityType Name="TableNo">
     <Key>
@@ -56,11 +58,11 @@
     <Key>
       <PropertyRef Name="UserId" />
     </Key>
-    <Property Name="UserId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-    <Property Name="FullName" Type="nvarchar" MaxLength="100" Nullable="false" />
-    <Property Name="UserName" Type="nvarchar" MaxLength="50" Nullable="false" />
-    <Property Name="PasswordHash" Type="nvarchar" MaxLength="256" Nullable="false" />
-    <Property Name="RoleId" Type="int" Nullable="false" />
+    <Property Name="UserId" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="FullName" Type="nvarchar" MaxLength="255" />
+    <Property Name="UserName" Type="nvarchar" MaxLength="100" />
+    <Property Name="PasswordHash" Type="nvarchar" MaxLength="255" />
+    <Property Name="RoleId" Type="int" />
     <Property Name="IsActive" Type="bit" />
   </EntityType>
   <Association Name="FK__FoodOrder__FoodI__4D94879B">
@@ -111,7 +113,19 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <EntityContainer Name="Resturant_DBContextStoreContainer">
+  <Association Name="FK_setup_FoodOrder_Users">
+    <End Role="Users" Type="Self.Users" Multiplicity="1" />
+    <End Role="setup_FoodOrder" Type="Self.setup_FoodOrder" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Users">
+        <PropertyRef Name="UserId" />
+      </Principal>
+      <Dependent Role="setup_FoodOrder">
+        <PropertyRef Name="UserId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="Resturant_ProjectModelStoreContainer">
     <EntitySet Name="FoodOrderDetails" EntityType="Self.FoodOrderDetails" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="Roles" EntityType="Self.Roles" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="setup_FoodCategory" EntityType="Self.setup_FoodCategory" Schema="dbo" store:Type="Tables" />
@@ -133,6 +147,10 @@
     </AssociationSet>
     <AssociationSet Name="FK__setup_Foo__Table__6FE99F9F" Association="Self.FK__setup_Foo__Table__6FE99F9F">
       <End Role="TableNo" EntitySet="TableNo" />
+      <End Role="setup_FoodOrder" EntitySet="setup_FoodOrder" />
+    </AssociationSet>
+    <AssociationSet Name="FK_setup_FoodOrder_Users" Association="Self.FK_setup_FoodOrder_Users">
+      <End Role="Users" EntitySet="Users" />
       <End Role="setup_FoodOrder" EntitySet="setup_FoodOrder" />
     </AssociationSet>
   </EntityContainer>

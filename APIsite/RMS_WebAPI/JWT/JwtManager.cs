@@ -11,7 +11,7 @@ namespace RMS_WebAPI.JWT
 {
     public static class JwtManager
     {
-        public static string GenerateToken(string userName, string role)
+        public static string GenerateToken(string userName, string role, Guid userId)
         {
             var key = Encoding.ASCII.GetBytes("THIS_IS_A_VERY_SECRET_KEY");
 
@@ -21,7 +21,8 @@ namespace RMS_WebAPI.JWT
                 Subject = new ClaimsIdentity(new[]
                 {
                 new Claim(ClaimTypes.Name, userName),
-                new Claim(ClaimTypes.Role, role)
+                new Claim(ClaimTypes.Role, role),
+                new Claim("UserId", userId.ToString())
             }),
                 Expires = DateTime.UtcNow.AddHours(6),
                 SigningCredentials = new SigningCredentials(
