@@ -41,8 +41,8 @@ namespace BussinessLogicLayer.Select
                 pageData.LastPageNo = CommonUtility.LastPageNo(pageSize, pageData.TotalNumberOfRecords);
 
                 pageData.Data = orderList
-                    .OrderBy(o => o.OrderDate)
-                    .ThenBy(o => o.IsPayementDone)
+                    .OrderByDescending(o => o.OrderDate)
+                    .OrderBy(o => o.IsPayementDone)
                     .Skip(skip)
                     .Take(pageSize)
                     .ToList();
@@ -79,6 +79,7 @@ namespace BussinessLogicLayer.Select
                     s.Quantity,
                     s.setup_FoodItem.FoodPrice,
                 })
+                .OrderBy(o => o.FoodName)
                 .ToList();
 
             return orderDetailLists;
