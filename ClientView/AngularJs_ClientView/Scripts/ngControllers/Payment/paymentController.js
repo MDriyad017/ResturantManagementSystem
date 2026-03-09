@@ -75,8 +75,6 @@
 
                 // Show the modal after data is loaded
                 $('#orderDetailsModal').modal('show');
-
-                console.log($scope.orderDetailsJsonListData);
             }, function (reason) {
                 console.log(reason);
                 // Show error message
@@ -101,7 +99,7 @@
                 q, $scope.pageIndexPayment, dataTableRows
             ).then(function (value) {
                 $scope.allOrderJsonListData = value.data;
-                console.log($scope.allOrderJsonListData);
+
                 lastPageNoPayment = value.data.LastPageNo;
                 if (value.data.TotalNumberOfRecords > 0) {
                     $scope.showGridPayment = true;
