@@ -11,95 +11,79 @@
     <link href="~/Content/bootstrap.min.css" rel="stylesheet" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
-
-    <style>
-        body {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            height: 100vh;
-            font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
-        }
-
-        .login-card {
-            max-width: 400px;
-            margin-top: 100px;
-            background: rgba(255, 255, 255, 0.95);
-            padding: 40px;
-            border-radius: 15px;
-            box-shadow: 0 15px 35px rgba(0,0,0,0.2);
-        }
-
-        .input-group-text {
-            background: transparent;
-            border-right: none;
-            color: #764ba2;
-        }
-
-        .form-control {
-            border-left: none;
-            height: 45px;
-        }
-
-            .form-control:focus {
-                box-shadow: none;
-                border-color: #ced4da;
-            }
-
-        .btn-login {
-            background: #764ba2;
-            border: none;
-            padding: 12px;
-            font-weight: 600;
-            transition: 0.3s;
-        }
-
-            .btn-login:hover {
-                background: #667eea;
-                transform: translateY(-2px);
-            }
-
-        .error-text {
-            color: #e74c3c;
-            font-size: 0.8rem;
-            margin-top: 2px;
-            display: block;
-        }
-    </style>
+    <link href="~/Content/css/customLoginPage.css" rel="stylesheet" />
 </head>
 <body>
-    <div class="container" ng-controller="loginController">
-        <div class="login-card mx-auto animate__animated animate__zoomIn">
+    <div class="food-bg">
+        <div class="pot">
+            <div class="noodles">
+                <div class="noodle-swirl"></div>
+                <div class="noodle-swirl noodle-swirl2"></div>
+                <div class="noodle-swirl noodle-swirl3"></div>
+            </div>
+            <div class="bubbles">
+                <div class="bubble b1"></div>
+                <div class="bubble b2"></div>
+                <div class="bubble b3"></div>
+                <div class="bubble b4"></div>
+                <div class="bubble b5"></div>
+            </div>
+        </div>
+
+        <div class="steam">
+            <div class="steam-particle particle1"></div>
+            <div class="steam-particle particle2"></div>
+            <div class="steam-particle particle3"></div>
+            <div class="steam-particle particle4"></div>
+            <div class="steam-particle particle5"></div>
+            <div class="steam-particle particle6"></div>
+        </div>
+        <div class="steam-wisp"></div>
+        <div class="steam-wisp steam-wisp2"></div>
+
+        <!-- extra floating gradients -->
+        <div></div>
+        <div></div>
+    </div>
+
+    <!-- login card with modern design & animations (exactly matching register) -->
+    <div class="login-wrapper" ng-controller="loginController">
+        <div class="login-card animate__animated animate__zoomIn">
             <div class="text-center mb-4">
                 <div class="mb-2">
-                    <i class="fas fa-utensils fa-3x" style="color: #764ba2;"></i>
+                    <i class="fas fa-utensils fa-3x" style="color: #b86a32;"></i>
                 </div>
-                <h3 class="fw-bold" style="color: #464040;">Welcome Back</h3>
-                <p class="text-muted">Please sign in to your account</p>
+                <h3 class="fw-bold" style="color: #35281a; letter-spacing: -0.5px;">Welcome Back</h3>
+                <p class="text-muted" style="color: #5a4230 !important;">sign in to continue</p>
             </div>
 
             <form name="frmLogin" novalidate ng-submit="login()">
-                <div class="mb-3">
-                    <div class="input-group">
-                        <span class="input-group-text"><i class="fas fa-user"></i></span>
-                        <input type="text" name="username" class="form-control" placeholder="Username"
-                               ng-model="username" required />
-                    </div>
-                    <span class="error-text" ng-show="frmLogin.username.$touched && frmLogin.username.$invalid">Username is required</span>
+                <!-- username field -->
+                <div class="input-group mb-1">
+                    <span class="input-group-text"><i class="fas fa-user"></i></span>
+                    <input type="text" name="username" class="form-control" placeholder="Username"
+                           ng-model="username" required>
                 </div>
+                <span class="error-text" ng-show="frmLogin.username.$touched && frmLogin.username.$invalid">username is required</span>
 
-                <div class="mb-4">
-                    <div class="input-group">
-                        <span class="input-group-text"><i class="fas fa-lock"></i></span>
-                        <input type="password" name="password" class="form-control" placeholder="Password"
-                               ng-model="password" required />
-                    </div>
-                    <span class="error-text" ng-show="frmLogin.password.$touched && frmLogin.password.$invalid">Password is required</span>
+                <!-- password field -->
+                <div class="input-group mb-1">
+                    <span class="input-group-text"><i class="fas fa-lock"></i></span>
+                    <input type="password" name="password" class="form-control" placeholder="Password"
+                           ng-model="password" required>
                 </div>
+                <span class="error-text" ng-show="frmLogin.password.$touched && frmLogin.password.$invalid">password required</span>
 
-                <button type="submit" class="btn btn-danger w-100 btn-login" ng-disabled="frmLogin.$invalid"> <i class="fas fa-sign-in-alt me-2"></i> Sign In </button>
+                <!-- login button -->
+                <button type="submit" class="btn btn-login w-100 mt-4"
+                        ng-disabled="frmLogin.$invalid">
+                    <i class="fas fa-sign-in-alt me-2"></i> Sign In
+                </button>
 
+                <!-- register link -->
                 <div class="text-center mt-4">
-                    <a href="javascript:void(0)" class="text-decoration-none" ng-click="openRegisterPage()">
-                        New here? <span style="color: #764ba2; font-weight: 600;">Create an Account</span>
+                    <a href="javascript:void(0)" class="text-decoration-none" ng-click="openRegisterPage()" style="color: #4f351f; font-weight: 500;">
+                        New here? <span style="color: #b45d2a; font-weight: 600; border-bottom: 1px dashed #b45d2a;">Create an Account</span>
                     </a>
                 </div>
             </form>
@@ -117,20 +101,3 @@
     <script src="~/Scripts/sweetAlert.js"></script>
 </body>
 </html>
-
-@*<div class="container mt-5" ng-controller="loginController">
-    <div class="card col-md-4 mx-auto">
-        <div class="card-header text-center">Login</div>
-        <div class="card-body">
-            <input type="text" class="form-control mb-2" ng-model="username" placeholder="Username" />
-            <input type="password" class="form-control mb-2" ng-model="password" placeholder="Password" />
-            <button class="btn btn-primary w-100" ng-click="login()">Login</button>
-        </div>
-    </div>
-</div>
-
-@section scripts {
-    <script src="~/Scripts/ngServices/Authentication/authService.js?reload=@DateTime.Now.Date.ToShortDateString()"></script>
-    <script src="~/Scripts/ngControllers/Login/loginController.js?reload=@DateTime.Now.Date.ToShortDateString()"></script>
-}*@
-

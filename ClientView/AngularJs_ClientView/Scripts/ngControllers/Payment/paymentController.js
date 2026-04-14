@@ -9,6 +9,12 @@
         $scope.selectedOrderId = null;
         $scope.selectedOrder = null;
 
+        $scope.printReceipt = function () {
+            $timeout(function () {
+                window.print();
+            }, 500); // Small delay to ensure data is rendered before printing
+        };
+
         $scope.previousPayment = function (e) {
             e.preventDefault();
             if ($scope.pageIndexPayment > 1) {
@@ -30,6 +36,9 @@
                 orderId, tableId
             ).then(function (value) {
                 if (value.data.IsSuccess === true) {
+                    orderDetails(orderId);
+                    // 3. Open Print Dialog
+                    $scope.printReceipt();
                     Swal.fire({
                         title: 'Success',
                         text: value.data.Message,
@@ -63,6 +72,12 @@
         };
 
         $scope.clickToDetails = function (orderId) {
+            orderDetails(orderId);
+            // Show the modal after data is loaded
+            $('#orderDetailsModal').modal('show');
+        }
+
+        var orderDetails = function (orderId) {
             // Find the selected order from the list
             $scope.selectedOrder = $scope.allOrderJsonListData.Data.find(function (order) {
                 return order.OrderId === orderId;
@@ -72,9 +87,7 @@
 
             foodItemService.FetchOrderDetailList(orderId).then(function (value) {
                 $scope.orderDetailsJsonListData = value.data;
-
-                // Show the modal after data is loaded
-                $('#orderDetailsModal').modal('show');
+                
             }, function (reason) {
                 console.log(reason);
                 // Show error message

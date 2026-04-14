@@ -78,7 +78,7 @@ namespace RMS_WebAPI.Controllers
             }
         }
 
-        [Authorize(Roles = "Admin")]
+        [Authorize(Roles = "Admin, Staf")]
         [HttpGet]
         [Route("G250225")]
         public IHttpActionResult SelectOrderList(string query, int pageIndex, int pageSize)
@@ -95,7 +95,7 @@ namespace RMS_WebAPI.Controllers
             }
         }
 
-        [Authorize(Roles = "Admin")]
+        [Authorize(Roles = "Admin, Staf")]
         [HttpGet]
         [Route("G220226")]
         public IHttpActionResult SelectOrderDetailsList(Guid orderId)

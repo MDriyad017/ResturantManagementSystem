@@ -2,7 +2,7 @@
     ViewBag.Title = "Index";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
-
+<link href="~/Content/css/forPrintRecept.css" rel="stylesheet" />
 <style>
     .text-green {
         color: #00cc00;
@@ -31,7 +31,6 @@
                         <th>Customer</th>
                         <th style="text-align:right">Total Price</th>
                         <th style="width: 40px;"></th>
-                        <th style="width: 40px"></th>
                     </tr>
                 </thead>
                 <tbody>
@@ -56,8 +55,6 @@
                                     <i class="fas fa-list"></i>
                                 </button>
                             </div>
-                        </td>
-                        <td>
                         </td>
                     </tr>
                 </tbody>
@@ -112,6 +109,7 @@
                                         <th>Item Name</th>
                                         <th style="text-align: right;">Quantity</th>
                                         <th style="text-align: right;">Unit Price</th>
+                                        <th style="text-align: right;">Total</th>
                                     </tr>
                                 </thead>
                                 <tbody>
@@ -119,13 +117,14 @@
                                         <td>{{$index + 1}}</td>
                                         <td>{{item.FoodName}}</td>
                                         <td style="text-align: right;">{{item.Quantity}}</td>
-                                        <td style="text-align: right;">{{item.FoodPrice}}</td>
+                                        <td style="text-align: right;">{{item.FoodPrice | number:2}}</td>
+                                        <td style="text-align: right;">{{ (item.Quantity * item.FoodPrice) | number:2 }}</td>
                                     </tr>
                                 </tbody>
                                 <tfoot ng-if="orderDetailsJsonListData.length > 0">
                                     <tr>
-                                        <th colspan="3" style="text-align: right;">Sub Total:</th>
-                                        <th style="text-align: right;">{{getOrderTotal()}}</th>
+                                        <th colspan="4" style="text-align: right;">Grand Total:</th>
+                                        <th style="text-align: right;">{{getOrderTotal() | number:2}}</th>
                                     </tr>
                                 </tfoot>
                             </table>
@@ -143,6 +142,39 @@
             </div>
         </div>
         <!-- Modal End -->
+        <!-- Print Receipt -->
+        <div id="receipt-print-section">
+            <div style="width: 50%; text-align:center">
+                <h4>SMART RESTURANT</h4>
+                <p>Table: {{selectedOrder.Table}} | Customer: {{selectedOrder.FullName}}</p>
+                <hr>
+            </div>
+            <table style="width: 50%; text-align:center">
+                <thead>
+                    <tr>
+                        <th>Item</th>
+                        <th>Qty</th>
+                        <th style="text-align:right">Total</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr ng-repeat="item in orderDetailsJsonListData">
+                        <td>{{item.FoodName}}</td>
+                        <td>{{item.Quantity}}</td>
+                        <td style="text-align:right">{{ (item.Quantity * item.FoodPrice) | number:2 }}</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <div style="width: 50%; text-align:center">
+                <hr>
+                <h5 style="text-align: center;">GRAND TOTAL: {{getOrderTotal() | number:2}}</h5>
+
+                <p style="margin-top: 20px;">Thank You! Please Come Again.</p>
+            </div>
+        </div>
+        <!-- Print Receipt -->
+
     </div>
 </div>
 

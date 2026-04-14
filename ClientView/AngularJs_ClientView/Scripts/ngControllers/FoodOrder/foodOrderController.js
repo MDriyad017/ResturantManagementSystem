@@ -12,6 +12,8 @@
         $scope.foodPhotoFileName = '';
         $scope.SelectedFiles = [];
         $scope.selectedFoodForOrderJsonList = [];
+        $scope.allFoodsJsonListData = [];
+        $scope.masterFoodsList = [];
         $scope.selectedCat = 'ALL';
 
         var token = $window.localStorage.getItem('jwtToken');
@@ -37,14 +39,24 @@
             $scope.totalFoodPrice = total.toFixed(2);
         };
 
-        // Add To Food For Order
+        // clickToAddFoods to also use master list
         $scope.clickToAddFoods = function (item) {
             var existingFood = $scope.selectedFoodForOrderJsonList.find(x => x.FoodItemID === item.FoodId);
+
+            // Find the item in master list
+            var masterItem = $scope.masterFoodsList.find(x => x.FoodId === item.FoodId);
+
             if (existingFood) {
                 // Increase quantity by 1 if the item already exists
                 existingFood.Quantity += 1;
-                item.Stock -= 1;
-            } else if (item.Stock > 0) {
+                masterItem.Stock -= 1;
+
+                // Update filtered view if item exists
+                var filteredItem = $scope.allFoodsJsonListData.find(x => x.FoodId === item.FoodId);
+                if (filteredItem) {
+                    filteredItem.Stock -= 1;
+                }
+            } else if (masterItem && masterItem.Stock > 0) {
                 // Add new item to the list with default quantity as 1
                 $scope.selectedFoodForOrderJsonList.push({
                     FoodItemID: item.FoodId,
@@ -52,7 +64,14 @@
                     FoodPrice: item.FoodPrice,
                     Quantity: 1
                 });
-                item.Stock -= 1;
+                masterItem.Stock -= 1;
+
+                // Update filtered view if item exists
+                var filteredItem = $scope.allFoodsJsonListData.find(x => x.FoodId === item.FoodId);
+                if (filteredItem) {
+                    filteredItem.Stock -= 1;
+                }
+
                 if ($scope.selectedFoodForOrderJsonList.length > 0) {
                     $scope.confirmOrder = false;
                 }
@@ -62,45 +81,62 @@
 
         // Increment Quantity
         $scope.incrementQuantity = function (food) {
-            var item = $scope.allFoodsJsonListData.find(x => x.FoodId === food.FoodItemID);
-            if (item && item.Stock > 0) {
+            // Find the item in the master list instead of filtered list
+            var masterItem = $scope.masterFoodsList.find(x => x.FoodId === food.FoodItemID);
+
+            if (masterItem && masterItem.Stock > 0) {
                 food.Quantity += 1;
-                item.Stock -= 1;
+                masterItem.Stock -= 1;
+
+                // Also update the stock in the filtered view if the item exists there
+                var filteredItem = $scope.allFoodsJsonListData.find(x => x.FoodId === food.FoodItemID);
+                if (filteredItem) {
+                    filteredItem.Stock -= 1;
+                }
             }
             $scope.calculateTotal();
         };
 
         // Decrement Quantity
         $scope.decrementQuantity = function (food) {
-            var item = $scope.allFoodsJsonListData.find(x => x.FoodId === food.FoodItemID);
+            // Find the item in the master list
+            var masterItem = $scope.masterFoodsList.find(x => x.FoodId === food.FoodItemID);
+
             if (food.Quantity > 1) {
                 food.Quantity -= 1;
-                item.Stock += 1;
+                masterItem.Stock += 1;
+
+                // Update filtered view if item exists
+                var filteredItem = $scope.allFoodsJsonListData.find(x => x.FoodId === food.FoodItemID);
+                if (filteredItem) {
+                    filteredItem.Stock += 1;
+                }
             } else {
                 // Remove item if quantity becomes 0
                 const index = $scope.selectedFoodForOrderJsonList.indexOf(food);
                 $scope.selectedFoodForOrderJsonList.splice(index, 1);
-                item.Stock += 1;
+                masterItem.Stock += 1;
+
+                // Update filtered view if item exists
+                var filteredItem = $scope.allFoodsJsonListData.find(x => x.FoodId === food.FoodItemID);
+                if (filteredItem) {
+                    filteredItem.Stock += 1;
+                }
             }
             $scope.calculateTotal();
+
             if ($scope.selectedFoodForOrderJsonList.length > 0) {
                 $scope.confirmOrder = false;
-            }
-            else {
+            } else {
                 $scope.confirmOrder = true;
             }
         };
 
         // Calculate Total Price
         $scope.filterFoodsCategoryWise = function (category) {
-            $scope.selectedCat = category; // Highlights the active category
+            $scope.selectedCat = category;
             GetAllFoodListData(category);
         }
-
-        //// Filter Category Wise Food
-        //$scope.filterFoodsCategoryWise = function (category) {
-        //    GetAllFoodListData(category)
-        //}
 
         // Save Order
         $scope.clickToSaveOrder = function () {
@@ -160,7 +196,6 @@
                     }
                 });
 
-                console.log($scope.foodCategoryListDropDownJsonData);
             }, function (reason) {
                 console.log(reason);
             });
@@ -171,10 +206,15 @@
             foodItemService.FetchFoodList(
                 q
             ).then(function (value) {
-                // Store the server response
+                // Store the complete list first time
+                if (!$scope.masterFoodsList || $scope.masterFoodsList.length === 0) {
+                    $scope.masterFoodsList = angular.copy(value.data);
+                }
+
+                // Store the server response for filtered view
                 $scope.allFoodsJsonListData = value.data;
 
-                // If cart has items, adjust stock counts
+                // If cart has items, adjust stock counts in the filtered view
                 if ($scope.selectedFoodForOrderJsonList && $scope.selectedFoodForOrderJsonList.length > 0) {
                     // Create a map of cart quantities
                     const cartQuantities = {};

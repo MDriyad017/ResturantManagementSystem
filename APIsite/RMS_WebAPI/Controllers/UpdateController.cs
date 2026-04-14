@@ -46,6 +46,7 @@ namespace RMS_WebAPI.Controllers
             }
         }
 
+        [Authorize(Roles = "Admin, Staf")]
         [HttpPost]
         [Route("U260225")]
         public IHttpActionResult UpdateFoodOrderAndTbl(CommonFoodOrder entityList)

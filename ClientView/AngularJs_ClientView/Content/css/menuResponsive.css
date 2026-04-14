@@ -49,7 +49,7 @@
 
         .menu-item.active a {
             color: white;
-            background: var(--accent-orange);
+            background: #6adbb2;
             border-radius: 12px;
         }
 

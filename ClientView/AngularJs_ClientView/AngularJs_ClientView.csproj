@@ -133,6 +133,9 @@
     <Content Include="Content\css\adminLTE.css" />
     <Content Include="Content\css\angular-confirm.css" />
     <Content Include="Content\css\customLayout.css" />
+    <Content Include="Content\css\customLoginPage.css" />
+    <Content Include="Content\css\customRegistrationPage.css" />
+    <Content Include="Content\css\forPrintRecept.css" />
     <Content Include="Content\css\forProductOrderResposive.css" />
     <Content Include="Content\css\menuResponsive.css" />
     <Content Include="Content\css\nprogress.css" />

@@ -1,0 +1,22 @@
+﻿#receipt-print-section {
+    display: none;
+}
+
+@media print {
+    body * {
+        visibility: hidden;
+    }
+
+    #receipt-print-section, #receipt-print-section * {
+        visibility: visible;
+    }
+
+    #receipt-print-section {
+        display: block !important;
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        font-family: 'Courier New', Courier, monospace; /* Standard POS font */
+    }
+}
